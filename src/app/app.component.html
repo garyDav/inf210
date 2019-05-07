@@ -3,7 +3,9 @@
 <!-- / PROGRESS BAR -->
 
 <!-- <slideshow [imageUrls]="imageUrlArray"></slideshow> -->
+<app-home style="width:100%;overflow-y: auto;" *ngIf="router.url == '/home'"></app-home>
 
+<ng-container *ngIf="router.url != '/home'">
 <!-- VERTICAL LAYOUT 1 -->
 <ng-container *ngIf="fuseConfig.layout.style === 'vertical-layout-1'">
     <vertical-layout-1></vertical-layout-1>
@@ -11,15 +13,15 @@
 <!-- / VERTICAL LAYOUT 1 -->
 
 <!-- VERTICAL LAYOUT 2 -->
-<ng-container *ngIf="fuseConfig.layout.style === 'vertical-layout-2'">
+<!-- <ng-container *ngIf="fuseConfig.layout.style === 'vertical-layout-2'">
     <vertical-layout-2></vertical-layout-2>
-</ng-container>
+</ng-container> -->
 <!-- / VERTICAL LAYOUT 2 -->
 
 <!-- VERTICAL LAYOUT 3 -->
-<ng-container *ngIf="fuseConfig.layout.style === 'vertical-layout-3'">
+<!-- <ng-container *ngIf="fuseConfig.layout.style === 'vertical-layout-3'">
     <vertical-layout-3></vertical-layout-3>
-</ng-container>
+</ng-container> -->
 <!-- / VERTICAL LAYOUT 3 -->
 
 <!-- HORIZONTAL LAYOUT 1 -->
@@ -38,3 +40,4 @@
     <fuse-theme-options></fuse-theme-options>
 </fuse-sidebar>
 <!-- / THEME OPTIONS PANEL -->
+</ng-container>

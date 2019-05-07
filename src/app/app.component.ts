@@ -15,6 +15,8 @@ import { navigation } from 'app/navigation/navigation';
 import { locale as navigationEnglish } from 'app/navigation/i18n/en';
 import { locale as navigationTurkish } from 'app/navigation/i18n/tr';
 
+import { Router } from '@angular/router';
+
 @Component({
     selector   : 'app',
     templateUrl: './app.component.html',
@@ -24,7 +26,6 @@ export class AppComponent implements OnInit, OnDestroy
 {
     fuseConfig: any;
     navigation: any;
-    imageUrlArray = [];
     @ViewChild('slideshow') slideshow: any;
 
     // Private
@@ -50,16 +51,10 @@ export class AppComponent implements OnInit, OnDestroy
         private _fuseSplashScreenService: FuseSplashScreenService,
         private _fuseTranslationLoaderService: FuseTranslationLoaderService,
         private _translateService: TranslateService,
-        private _platform: Platform
+        private _platform: Platform,
+        public router: Router
     )
     {
-        this.imageUrlArray[0] = 'http://lorempixel.com/1024/350/technics/';
-        this.imageUrlArray[1] = 'http://lorempixel.com/1024/350/technics/';
-        this.imageUrlArray[2] = 'http://lorempixel.com/1024/350/technics/';
-        this.imageUrlArray[3] = 'http://lorempixel.com/1024/350/technics/';
-        this.imageUrlArray[4] = 'http://lorempixel.com/1024/350/technics/';
-        this.imageUrlArray[5] = 'http://lorempixel.com/1024/350/technics/';
-        this.imageUrlArray[6] = 'http://lorempixel.com/1024/350/technics/';
         // Get default navigation
         this.navigation = navigation;
 

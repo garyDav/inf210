@@ -5,6 +5,7 @@ import { FuseNavigationModule } from '@fuse/components';
 import { FuseSharedModule } from '@fuse/shared.module';
 
 import { NavbarVerticalStyle2Component } from 'app/layout/components/navbar/vertical/style-2/style-2.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,9 @@ import { NavbarVerticalStyle2Component } from 'app/layout/components/navbar/vert
         MatIconModule,
 
         FuseSharedModule,
-        FuseNavigationModule
+        FuseNavigationModule,
+
+        RouterModule
     ],
     exports     : [
         NavbarVerticalStyle2Component

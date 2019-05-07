@@ -14,6 +14,12 @@ import { FuseProgressBarModule, FuseSidebarModule, FuseThemeOptionsModule } from
 
 import { fuseConfig } from 'app/fuse-config';
 
+import { SlideshowModule } from 'ng-simple-slideshow';
+
+//Simulate a data server
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { FakeDbService }  from './fake-db/fake-db.service';
+
 import { AppComponent } from 'app/app.component';
 import { LayoutModule } from 'app/layout/layout.module';
 import { IntroductionModule } from './main/introduction/introduction.module';
@@ -21,8 +27,17 @@ import { FirstStepsModule } from './main/first-steps/first-steps.module';
 import { ObjectOrientedProgrammingModule } from './main/object-oriented-programming/object-oriented-programming.module';
 import { AdvancedTypesModule } from './main/advanced-types/advanced-types.module';
 import { DecoratorsGenericsModule } from './main/decorators-generics/decorators-generics.module';
+import { HomeComponent } from './main/home/home.component';
 
 const appRoutes: Routes = [
+    {
+        path        : 'academy',
+        loadChildren: './main/academy/academy.module#AcademyModule'
+    },
+    {
+        path     : 'home',
+        component: HomeComponent
+    },
     {
         path        : '**',
         redirectTo  : 'introduction'
@@ -47,7 +62,8 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        HomeComponent
     ],
     imports     : [
         BrowserModule,
@@ -58,6 +74,7 @@ const appRoutes: Routes = [
         // Other libraries
 
         TranslateModule.forRoot(),
+        SlideshowModule,
 
         // Material moment date module
         MatMomentDateModule,
@@ -79,7 +96,14 @@ const appRoutes: Routes = [
         FirstStepsModule,
         IntroductionModule,
         LayoutModule,
-        ObjectOrientedProgrammingModule
+        ObjectOrientedProgrammingModule,
+
+        // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+        // and returns simulated server responses.
+        // Remove it when a real server is ready to receive requests.
+        HttpClientInMemoryWebApiModule.forRoot(
+            FakeDbService, { dataEncapsulation: false }
+        )
     ],
     bootstrap   : [
         AppComponent

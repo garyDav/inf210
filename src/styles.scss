@@ -3,3 +3,17 @@
 
 // Import app.theme.scss
 @import "app/app.theme";
+
+.clearLink {
+  text-decoration: none !important;
+}
+.clearLink:link {
+  text-decoration: none;
+}
+
+.clearLink:visited {
+  text-decoration: none;
+}
+.mano {
+  cursor: pointer;
+}
