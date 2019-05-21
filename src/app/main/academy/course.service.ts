@@ -37,7 +37,7 @@ export class CourseService implements Resolve<any>
         return new Promise((resolve, reject) => {
 
             Promise.all([
-                this.getCourse(route.params.courseId, route.params.courseSlug)
+                this.getCourse(route.params.courseId)
             ]).then(
                 () => {
                     resolve();
@@ -51,13 +51,12 @@ export class CourseService implements Resolve<any>
      * Get course
      *
      * @param courseId
-     * @param courseSlug
      * @returns {Promise<any>}
      */
-    getCourse(courseId, courseSlug): Promise<any>
+    getCourse(courseId): Promise<any>
     {
         return new Promise((resolve, reject) => {
-            this._httpClient.get('api/academy-course/' + courseId + '/' + courseSlug)
+            this._httpClient.get('api/academy-course/' + courseId )
                 .subscribe((response: any) => {
                     this.onCourseChanged.next(response);
                     resolve(response);
