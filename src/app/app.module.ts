@@ -40,7 +40,7 @@ const appRoutes: Routes = [
     },
     {
         path        : '**',
-        redirectTo  : 'introduction'
+        redirectTo  : 'home'
     },
     {
         path        : 'first-steps',
