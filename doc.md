@@ -30,3 +30,19 @@ Probablemente uno de los más ampliamente usados tipos primitivos en nuestro có
     </body>
 </html>
 ```
+Hola <b> - Bold text </b>
+<br>
+Hola <i> - Italic text </i>
+<br>
+Hola <mark> - Marked text </mark>
+<br>
+Hola <small> - Small text </small>
+<br>
+Hola <del> - Deleted text </del>
+<br>
+Hola <ins> - Inserted text </ins>
+<br>
+Hola <sub> - Subscript text </sub>
+<br>
+Hola <sup> - Superscript text </sup>
+<br>

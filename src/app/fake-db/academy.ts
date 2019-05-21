@@ -683,8 +683,8 @@ export class AcademyFakeDb
             'Si al realizar esta instalación ocurre algún error, una alternativa para practicar sería <a href="https://www.typescriptlang.org/play/index.html">la página de pruebas de TypeScript</a>'
         },
         {
-            'title'  : 'Install the Firebase Command Line Interface',
-            'content': '<h1>Step 4 - Install the Firebase Command Line Interface</h1>' +
+            'title'  : 'Sub contenido',
+            'content': '<h1>4 - Sub contenido</h1>' +
             '<br>' +
             'This is an example step of the course. You can put anything in here from example codes to videos.' +
             '<br><br>' +
@@ -722,8 +722,8 @@ export class AcademyFakeDb
             'This will install the three packages locally and add them as declared dependencies in your package.js file.'
         },
         {
-            'title'  : 'Deploy and run the web app',
-            'content': '<h1>Step 5 - Deploy and run the web app</h1>' +
+            'title'  : 'Sub contenido',
+            'content': '<h1>5 - Sub contenido</h1>' +
             '<br>' +
             'This is an example step of the course. You can put anything in here from example codes to videos.' +
             '<br><br>' +
@@ -761,8 +761,8 @@ export class AcademyFakeDb
             'This will install the three packages locally and add them as declared dependencies in your package.js file.'
         },
         {
-            'title'  : 'The Functions Directory',
-            'content': '<h1>Step 6 - The Functions Directory</h1>' +
+            'title'  : 'Sub contenido',
+            'content': '<h1>6 - Sub contenido</h1>' +
             '<br>' +
             'This is an example step of the course. You can put anything in here from example codes to videos.' +
             '<br><br>' +
@@ -800,8 +800,8 @@ export class AcademyFakeDb
             'This will install the three packages locally and add them as declared dependencies in your package.js file.'
         },
         {
-            'title'  : 'Import the Cloud Functions and Firebase Admin modules',
-            'content': '<h1>Step 7 - Import the Cloud Functions and Firebase Admin modules</h1>' +
+            'title'  : 'Sub contenido',
+            'content': '<h1>7 - Sub contenido</h1>' +
             '<br>' +
             'This is an example step of the course. You can put anything in here from example codes to videos.' +
             '<br><br>' +
@@ -839,8 +839,8 @@ export class AcademyFakeDb
             'This will install the three packages locally and add them as declared dependencies in your package.js file.'
         },
         {
-            'title'  : 'Welcome New Users',
-            'content': '<h1>Step 8 - Welcome New Users</h1>' +
+            'title'  : 'Sub contenido',
+            'content': '<h1>8 - Sub contenido</h1>' +
             '<br>' +
             'This is an example step of the course. You can put anything in here from example codes to videos.' +
             '<br><br>' +
@@ -878,8 +878,8 @@ export class AcademyFakeDb
             'This will install the three packages locally and add them as declared dependencies in your package.js file.'
         },
         {
-            'title'  : 'Images moderation',
-            'content': '<h1>Step 9 - Images moderation</h1>' +
+            'title'  : 'Sub contenido',
+            'content': '<h1>9 - Sub contenido</h1>' +
             '<br>' +
             'This is an example step of the course. You can put anything in here from example codes to videos.' +
             '<br><br>' +
@@ -917,8 +917,8 @@ export class AcademyFakeDb
             'This will install the three packages locally and add them as declared dependencies in your package.js file.'
         },
         {
-            'title'  : 'New Message Notifications',
-            'content': '<h1>Step 10 - New Message Notifications</h1>' +
+            'title'  : 'Sub contenido',
+            'content': '<h1>10 - Sub contenido</h1>' +
             '<br>' +
             'This is an example step of the course. You can put anything in here from example codes to videos.' +
             '<br><br>' +
@@ -956,8 +956,8 @@ export class AcademyFakeDb
             'This will install the three packages locally and add them as declared dependencies in your package.js file.'
         },
         {
-            'title'  : 'Congratulations!',
-            'content': '<h1>Step 11 - Congratulations!</h1>' +
+            'title'  : '¡Felicidades!',
+            'content': '<h1>11 - ¡Felicidades!</h1>' +
             '<br>' +
             'You\'ve built a full-fidelity, offline-capable progressive web app by leveraging the power of reusable Web Components and Firebase. Why bother with a native app when you know how to do all that?!'
         }
