@@ -8,6 +8,8 @@ import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
 
 import { CourseService } from '../academy/course.service';
 
+import { HighlightResult } from 'ngx-highlightjs';
+
 @Component({
   selector: 'app-introduction',
   templateUrl: './introduction.component.html',
@@ -26,6 +28,20 @@ export class IntroductionComponent implements OnInit, OnDestroy, AfterViewInit {
 
   // Private
   private _unsubscribeAll: Subject<any>;
+
+  //Youtube player
+  id = 'jlIRqe8uvxM';
+  playerVars = {
+    cc_lang_pref: 'en'
+  };
+  private player;
+  private ytEvent;
+
+  response: HighlightResult;
+  code = `function myFunction() {
+    document.getElementById("demo1").innerHTML = "Hello there!";
+    document.getElementById("demo2").innerHTML = "How are you?";
+  }`
 
   /**
    * Constructor
@@ -155,6 +171,32 @@ export class IntroductionComponent implements OnInit, OnDestroy, AfterViewInit {
   toggleSidebar(name): void
   {
       this._fuseSidebarService.getSidebar(name).toggleOpen();
+  }
+
+  //Youtube player
+  onStateChange(event) {
+    this.ytEvent = event.data;
+  }
+  savePlayer(player) {
+    this.player = player;
+  }
+  
+  playVideo() {
+    this.player.playVideo();
+  }
+  
+  pauseVideo() {
+    this.player.pauseVideo();
+  }
+
+  onHighlight(e) {
+    this.response = {
+      language: e.language,
+      r: e.r,
+      second_best: '{...}',
+      top: '{...}',
+      value: '{...}'
+    }
   }
 
 }
