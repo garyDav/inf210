@@ -6,16 +6,12 @@ import { FuseSharedModule } from '@fuse/shared.module';
 
 import { AdvancedTypesComponent } from './advanced-types.component';
 
-import { CourseService } from '../academy/course.service';
 import { FuseSidebarModule } from '@fuse/components';
 
 const routes = [
   {
-    path     : 'ad-types/:courseId',
-    component: AdvancedTypesComponent,
-    resolve  : {
-      academy: CourseService
-    }
+    path     : 'ad-types',
+    component: AdvancedTypesComponent
   }
 ];
 
@@ -34,9 +30,7 @@ const routes = [
     FuseSharedModule,
     FuseSidebarModule
   ],
-  providers   : [
-    CourseService
-  ],
+  providers   : [],
   exports     : [
     AdvancedTypesComponent
   ]

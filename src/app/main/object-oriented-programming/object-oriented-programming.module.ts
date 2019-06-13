@@ -6,16 +6,12 @@ import { FuseSharedModule } from '@fuse/shared.module';
 
 import { ObjectOrientedProgrammingComponent } from './object-oriented-programming.component';
 
-import { CourseService } from '../academy/course.service';
 import { FuseSidebarModule } from '@fuse/components';
 
 const routes = [
   {
-    path     : 'poo/:courseId',
-    component: ObjectOrientedProgrammingComponent,
-    resolve  : {
-      academy: CourseService
-    }
+    path     : 'poo',
+    component: ObjectOrientedProgrammingComponent
   }
 ];
 
@@ -34,9 +30,7 @@ const routes = [
     FuseSharedModule,
     FuseSidebarModule
   ],
-  providers   : [
-    CourseService
-  ],
+  providers   : [],
   exports     : [
     ObjectOrientedProgrammingComponent
   ]

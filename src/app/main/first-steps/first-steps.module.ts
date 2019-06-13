@@ -6,16 +6,12 @@ import { FuseSharedModule } from '@fuse/shared.module';
 
 import { FirstStepsComponent } from './first-steps.component';
 
-import { CourseService } from '../academy/course.service';
 import { FuseSidebarModule } from '@fuse/components';
 
 const routes = [
   {
-    path     : 'first-steps/:courseId',
-    component: FirstStepsComponent,
-    resolve  : {
-      academy: CourseService
-    }
+    path     : 'first-steps',
+    component: FirstStepsComponent
   }
 ];
 
@@ -34,9 +30,7 @@ const routes = [
     FuseSharedModule,
     FuseSidebarModule
   ],
-  providers   : [
-    CourseService
-  ],
+  providers   : [],
   exports     : [
     FirstStepsComponent
   ]

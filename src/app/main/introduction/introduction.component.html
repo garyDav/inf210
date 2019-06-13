@@ -1,125 +1,70 @@
-<div id="academy-course" class="page-layout simple left-sidebar inner-scroll">
+<mat-horizontal-stepper class="post center" [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        joder1
+        <div class="step-navigation">
+            <button mat-button matStepperNext>Next</button>
+        </div>
+        <!-- <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+        </form> -->
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        joder2
+        <div>
+            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Back</button>
+        </div>
+        <!-- <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+            <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+        </form> -->
+    </mat-step>
+    <mat-step>
+        joder3
+        <ng-template matStepLabel>Done</ng-template>
+        You are now done.
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+    </mat-step>
+</mat-horizontal-stepper>
 
-  <!-- SIDEBAR -->
-  <fuse-sidebar class="sidebar" name="academy-course-left-sidebar-1" position="left" lockedOpen="gt-md">
-
-      <!-- SIDEBAR CONTENT -->
-      <div class="content" fusePerfectScrollbar>
-
-          <div class="steps">
-
-              <div class="step"
-                   *ngFor="let step of course.steps; let i = index; let last = last; let first = first"
-                   (click)="gotoStep(i)"
-                   [ngClass]="{'current': currentStep === i, 'completed': currentStep > i, 'last': last, 'first': first}">
-                  <div class="index">
-                      <span>{{i + 1}}</span>
-                  </div>
-                  <div class="title">{{step.title}}</div>
-              </div>
-
-          </div>
-
-      </div>
-      <!-- / SIDEBAR CONTENT -->
-
-  </fuse-sidebar>
-  <!-- / SIDEBAR -->
-
-  <!-- CENTER -->
-  <div class="center">
-
-      <!-- HEADER -->
-      <div class="header accent p-24" fxLayout="row" fxLayoutAlign="start center">
-
-          <button mat-icon-button class="sidebar-toggle mr-16" fxHide.gt-md
-                  (click)="toggleSidebar('academy-course-left-sidebar-1')">
-              <mat-icon>menu</mat-icon>
-          </button>
-
-          <button mat-icon-button class="mr-16" [routerLink]="'/apps/academy/courses'">
-              <mat-icon>arrow_back</mat-icon>
-          </button>
-
-          <div>
-              <h2>{{course.title}}</h2>
-          </div>
-
-      </div>
-      <!-- / HEADER -->
-
-      <!-- CONTENT -->
-      <div id="course-content" class="content">
-
-          <ng-container *ngFor="let step of course.steps; let i = index;">
-
-              <div class="course-step" fusePerfectScrollbar
-                   *ngIf="currentStep === i"
-                   [@slideIn]="animationDirection">
-
-                  <div id="course-step-content" class="course-step-content" [innerHTML]="step.content"></div>
-                  <div *ngIf="i == course.steps.length-1" style="text-align: center;">
-                    <div>
-                        <button *ngIf="ytEvent !== 1"
-                            type="button"
-                            class="btn btn-primary"
-                            (click)="playVideo()"
-                            mat-fab color="primary">
-                            Play >
-                        </button>
-                        <button *ngIf="ytEvent === 1"
-                            type="button"
-                            class="btn btn-danger"
-                            (click)="pauseVideo()"
-                            mat-fab color="primary">
-                            Pausa ||
-                        </button>
-                    </div>
-                    <section class="card-img-top">
-                        <youtube-player
-                        [videoId]="id"
-                        (ready)="savePlayer($event)"
-                        (change)="onStateChange($event)"
-                        [playerVars]="playerVars">
-                        </youtube-player>
-                    </section>
-                    <!-- Estado del reproductor: <pre>{{ ytEvent }}</pre> -->
-                    <br><br><br>
-                  </div>
-
-              </div>
-
-          </ng-container>
-
-      </div>
-      <!-- / CONTENT -->
-
-      <div class="step-navigation">
-
-          <button mat-fab class="previous mat-accent fuse-white-fg"
-                  (click)="gotoPreviousStep()"
-                  [disabled]="currentStep === 0"
-                  [fxHide]="currentStep === 0">
-              <mat-icon>chevron_left</mat-icon>
-          </button>
-
-          <button mat-fab class="next mat-accent fuse-white-fg"
-                  (click)="gotoNextStep()"
-                  [disabled]="currentStep === course.totalSteps - 1"
-                  [fxHide]="currentStep === course.totalSteps - 1">
-              <mat-icon>chevron_right</mat-icon>
-          </button>
-
-          <button mat-fab class="done green-600"
-                  routerLink="/apps/academy/courses"
-                  [disabled]="currentStep !== course.totalSteps - 1"
-                  [fxShow]="currentStep === course.totalSteps - 1">
-              <mat-icon>check</mat-icon>
-          </button>
-
-      </div>
-
-  </div>
-  <!-- / CENTER -->
-
-</div>
+<!-- <div class="post center">
+    <div>
+        <button *ngIf="ytEvent !== 1"
+            type="button"
+            class="btn btn-primary"
+            (click)="playVideo()"
+            mat-fab color="primary">
+            Play >
+        </button>
+        <button *ngIf="ytEvent === 1"
+            type="button"
+            class="btn btn-danger"
+            (click)="pauseVideo()"
+            mat-fab color="primary">
+            Pausa ||
+        </button>
+    </div>
+    <section class="card-img-top">
+        <youtube-player
+        [videoId]="id"
+        (ready)="savePlayer($event)"
+        (change)="onStateChange($event)"
+        [playerVars]="playerVars">
+        </youtube-player>
+    </section>
+</div> -->

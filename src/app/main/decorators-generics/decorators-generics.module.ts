@@ -6,16 +6,12 @@ import { FuseSharedModule } from '@fuse/shared.module';
 
 import { DecoratorsGenericsComponent } from './decorators-generics.component';
 
-import { CourseService } from '../academy/course.service';
 import { FuseSidebarModule } from '@fuse/components';
 
 const routes = [
   {
-    path     : 'dec-generics/:courseId',
-    component: DecoratorsGenericsComponent,
-    resolve  : {
-      academy: CourseService
-    }
+    path     : 'dec-generics',
+    component: DecoratorsGenericsComponent
   }
 ];
 
@@ -34,9 +30,7 @@ const routes = [
     FuseSharedModule,
     FuseSidebarModule
   ],
-  providers   : [
-    CourseService
-  ],
+  providers   : [],
   exports     : [
     DecoratorsGenericsComponent
   ]

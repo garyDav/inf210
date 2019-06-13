@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSelectModule } from '@angular/material';
+import { MatButtonModule,
+         MatFormFieldModule,
+         MatIconModule,
+         MatInputModule,
+         MatSelectModule,
+         MatStepperModule } from '@angular/material';
 import { FuseSharedModule } from '@fuse/shared.module';
 
 import { IntroductionComponent } from './introduction.component';
 
-import { CourseService } from '../academy/course.service';
 import { FuseSidebarModule } from '@fuse/components';
 
 import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
@@ -22,11 +26,8 @@ export function hljsLanguages() {
 
 const routes = [
   {
-    path     : 'introduction/:courseId',
-    component: IntroductionComponent,
-    resolve  : {
-      academy: CourseService
-    }
+    path     : 'introduction',
+    component: IntroductionComponent
   }
 ];
 
@@ -41,6 +42,7 @@ const routes = [
     MatIconModule,
     MatInputModule,
     MatSelectModule,
+    MatStepperModule,
 
     NgxYoutubePlayerModule.forRoot(),
     HighlightModule.forRoot({
@@ -50,9 +52,7 @@ const routes = [
     FuseSharedModule,
     FuseSidebarModule
   ],
-  providers   : [
-    CourseService
-  ],
+  providers   : [],
   exports     : [
     IntroductionComponent
   ]

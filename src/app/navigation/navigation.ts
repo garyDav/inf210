@@ -11,35 +11,35 @@ export const navigation: FuseNavigation[] = [
                 title    : 'Introducción',
                 type     : 'item',
                 icon     : 'note',
-                url      : '/introduction/15459251a6d6b397565'
+                url      : '/introduction'
             },
             {
                 id       : 'ps',
                 title    : 'Primeros Pasos en TS',
                 type     : 'item',
                 icon     : 'note',
-                url      : '/first-steps/15459251a6d6b397565'
+                url      : '/first-steps'
             },
             {
                 id       : 'poo',
                 title    : 'P.O.O.',
                 type     : 'item',
                 icon     : 'note',
-                url      : '/poo/15459251a6d6b397565'
+                url      : '/poo'
             },
             {
                 id       : 'tad',
                 title    : 'Tipos avanzados de datos',
                 type     : 'item',
                 icon     : 'note',
-                url      : '/ad-types/15459251a6d6b397565'
+                url      : '/ad-types'
             },
             {
                 id       : 'decgen',
                 title    : 'Decoradores y Genéricos',
                 type     : 'item',
                 icon     : 'note',
-                url      : '/dec-generics/15459251a6d6b397565'
+                url      : '/dec-generics'
             }
         ]
     }

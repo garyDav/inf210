@@ -33,16 +33,16 @@ import { HomeComponent } from './main/home/home.component';
 
 const appRoutes: Routes = [
     {
-        path        : 'academy',
-        loadChildren: './main/academy/academy.module#AcademyModule'
-    },
-    {
         path     : 'home',
         component: HomeComponent
     },
     {
         path        : '**',
         redirectTo  : 'home'
+    },
+    {
+        path        : 'introduction',
+        redirectTo  : 'introduction'
     },
     {
         path        : 'first-steps',

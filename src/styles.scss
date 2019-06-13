@@ -28,3 +28,24 @@
   border-radius: 3px !important;
   font-size: 14px !important;
 }
+
+.center {
+  text-align: center;
+}
+.post {
+  margin: 2em auto;;
+  width: 90%;
+  position: relative;
+}
+.post-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 15px;
+}
+
+
+@media (max-width: 720px) {
+  .post-content {
+      grid-gap: 5px;
+  }
+}
