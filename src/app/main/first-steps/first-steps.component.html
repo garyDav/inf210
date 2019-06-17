@@ -1,1 +1,149 @@
-first
+<div id="academy-course" class="page-layout simple left-sidebar inner-scroll">
+  <!-- CENTER -->
+  <div class="center">
+      <!-- HEADER -->
+      <div class="header accent p-24" fxLayout="row" fxLayoutAlign="start center">
+          <button mat-icon-button class="mr-16" [routerLink]="'/home'">
+              <mat-icon>arrow_back</mat-icon>
+          </button>
+
+          <div>
+              <h2>Primeros Pasos en TS</h2>
+          </div>
+
+      </div>
+      <!-- / HEADER -->
+
+      <!-- CONTENT -->
+      <div id="course-content" class="content">
+  
+          <div class="course-step">
+              <div class="course-step-content">
+                      <mat-horizontal-stepper #stepper>
+                          <mat-step #first_step>
+                              <ng-template matStepLabel>Tipos de datos</ng-template>
+                              <div style="text-align: left;">
+                                  <h1>1 - Tipos de datos</h1>
+                                  <p><b>TypeScript</b> es un lenguaje que añade a <b>JavaScript</b> una capa de tipado estático y algunas
+                                    otras incorporaciones de <b>OOP tradicional</b>. Esta capa puede resultarnos de muchísima
+                                    ayuda durante el desarrollo. Sin embargo, todas estas características son simplemente para
+                                    ayudar a trabajar con JavaScript en tiempo de diseño, ya que <b>TypeScript</b> compila todo
+                                    como JavaScript tradicional.</p>
+                                  <p>Tipado estático o fuertemente tipado: Se debe de definir el tipo de dato, obligando a que no
+                                    pueda haber errores con los tipos de datos.</p>
+                                  <p>Tipado dinámico o débilmente tipado: No se deben de o tiene porque especificar el tipo de
+                                    dato (PHP, Javascript).</p>
+                                  <p>Porque <b>typescript</b> es fuertemente tipado</p>
+                                  <pre><code [highlight]="code1"></code></pre>
+                                  <p>Estos ejemplos son posibles problemas que tienen los lenguajes débilmente tipadas</p>
+                                  <h1>Tipos primitivos</h1>
+                                  <h2>Boolean</h2>
+                                  <p>true o false</p>
+                                  <pre><code [highlight]="code2"></code></pre>
+                                  <h2>Number</h2>
+                                  <p>Datos númericos</p>
+                                  <pre><code [highlight]="code3"></code></pre>
+                                  <h2>String</h2>
+                                  <p>Cadenas de caracteres y/o textos</p>
+                                  <pre><code [highlight]="code4"></code></pre>
+                                  <p>También se pueben utilizar "Templates" plantillas para concatenar strings como por ejemplo:</p>
+                                  <pre><code [highlight]="code5"></code></pre>
+                                  <p>Para poder utilizar esta sintaxis los string deben estar contenidos entre <code class="code-text">`</code></p>
+                                  <p>Este tipo de sintaxis es el equivalente a:</p>
+                                  <pre><code [highlight]="code6"></code></pre>
+                                  <h2>Plantillas de strings</h2>
+                                  <p>Las plantillas de strings se escriben entre <code class="code-text">`</code> y la sintáxis sería:</p>
+                                  <pre><code [highlight]="code7"></code></pre>
+                                  <p>Este tipo de plantillas permite que podamos utilizar más de una línea sin tener que utilizar el operador <code class="code-text">+</code> por eso se dice que un "string templated" es <b>multilineal</b></p>
+                                  <h2>String literal type</h2>
+                                  <p>Podemos crear un string literal como un type. Por ejemplo:</p>
+                                  <pre><code [highlight]="code8"></code></pre>
+                              </div>
+                              <div class="step-navigation">
+                                  <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                      <mat-icon>chevron_right</mat-icon>
+                                  </button>
+                              </div>
+                          </mat-step>
+                          <mat-step #second_step>
+                              <ng-template matStepLabel>second_step</ng-template>
+                              <div style="text-align: left;">
+                                  <h1>2 - </h1>
+                              </div>
+                              <div class="step-navigation">
+                                  <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                      <mat-icon>chevron_left</mat-icon>
+                                  </button>
+                                  <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                      <mat-icon>chevron_right</mat-icon>
+                                  </button>
+                              </div>
+                          </mat-step>
+                          <mat-step #third_step>
+                              <ng-template matStepLabel>third_step</ng-template>
+                              <div style="text-align: left;">
+                                  <h1>3 - </h1>
+                              </div>
+                              <div class="step-navigation">
+                                  <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                      <mat-icon>chevron_left</mat-icon>
+                                  </button>
+                                  <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                      <mat-icon>chevron_right</mat-icon>
+                                  </button>
+                              </div>
+                          </mat-step>
+                          <mat-step #quarter_step>
+                              <ng-template matStepLabel>quarter_step</ng-template>
+                              <div style="text-align: left;">
+                                  <h1>4 - </h1>
+                                  <p>
+                                      En este tutorial verá la parte introductoria de TypeScript.
+                                  </p>
+                                  <ng-container *ngIf="stepper.selected == quarter_step">
+                                      <div style="text-align: center;">
+                                          <button *ngIf="ytEvent !== 1"
+                                              type="button"
+                                              class="btn btn-primary"
+                                              (click)="playVideo()"
+                                              mat-fab color="primary">
+                                              Play >
+                                          </button>
+                                          <button *ngIf="ytEvent === 1"
+                                              type="button"
+                                              class="btn btn-danger"
+                                              (click)="pauseVideo()"
+                                              mat-fab color="primary">
+                                              Pausa ||
+                                          </button>
+                                      </div>
+                                      <div style="text-align: center;">
+                                          <youtube-player
+                                              [videoId]="id"
+                                              (ready)="savePlayer($event)"
+                                              (change)="onStateChange($event)"
+                                              [playerVars]="playerVars">
+                                          </youtube-player>
+                                      </div>
+                                  </ng-container>
+                              </div>
+                              <div class="step-navigation">
+                                  <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                      <mat-icon>chevron_left</mat-icon>
+                                  </button>
+                                  <button mat-fab class="done green-600" (click)="stepper.reset()">
+                                      <mat-icon>check</mat-icon>
+                                  </button>
+                              </div>
+                          </mat-step>
+                  </mat-horizontal-stepper>
+              </div>
+          </div>
+  
+      </div>
+      <!-- / CONTENT -->
+
+  </div>
+  <!-- / CENTER -->
+
+</div>

@@ -1,12 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 
-import { MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSelectModule } from '@angular/material';
+import { MatButtonModule,
+         MatFormFieldModule,
+         MatIconModule,
+         MatInputModule,
+         MatSelectModule,
+         MatStepperModule } from '@angular/material';
 import { FuseSharedModule } from '@fuse/shared.module';
-
 import { FirstStepsComponent } from './first-steps.component';
-
 import { FuseSidebarModule } from '@fuse/components';
+
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
+
+import { HighlightModule } from 'ngx-highlightjs';
+import typescript from 'highlight.js/lib/languages/typescript';
+import javascript from 'highlight.js/lib/languages/javascript';
+export function hljsLanguages() {
+  return [
+      {name: 'javascript', func: javascript},
+      {name: 'typescript', func: typescript}
+  ];
+}
 
 const routes = [
   {
@@ -26,6 +42,13 @@ const routes = [
     MatIconModule,
     MatInputModule,
     MatSelectModule,
+    MatStepperModule,
+
+    BrowserModule,
+    NgxYoutubePlayerModule.forRoot(),
+    HighlightModule.forRoot({
+      languages: hljsLanguages
+    }),
 
     FuseSharedModule,
     FuseSidebarModule

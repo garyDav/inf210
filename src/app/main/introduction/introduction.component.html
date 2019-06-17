@@ -6,49 +6,285 @@
             <button mat-icon-button class="mr-16" [routerLink]="'/home'">
                 <mat-icon>arrow_back</mat-icon>
             </button>
-    
+
             <div>
-                <h2>Introduction</h2>
+                <h2>Introducción</h2>
             </div>
-    
+
         </div>
         <!-- / HEADER -->
-    
+
         <!-- CONTENT -->
         <div id="course-content" class="content">
     
-            <ng-container>
-            </ng-container>
+            <div class="course-step">
+                <div class="course-step-content">
+                        <mat-horizontal-stepper #stepper>
+                            <mat-step #first_step>
+                                <ng-template matStepLabel>Evolución de javacript</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>1 - Evolución de javacript</h1>
+                                    <p>
+                                        Javascript pasó de crear aplicaciones web muy limitadas, ha las potentes aplicaciones actuales, ésto dejó muy claro
+                                        las especificaciones de <code class="code-text">ES5</code> de Javascript con graves problemas de escalabilidad y
+                                        capacidad de mantenimiento, el problema sé agravó a medida que aumentaron el número de librerías y módulos que
+                                        seguían una perfecta integración en las nuevas aplicaciones, éstas limitaciones obligaron a soluciones complicadas y
+                                        poco eficaces que perjudicaban el desarrollo de esta tecnología.
+                                    </p>
+                                    <p>
+                                        Como respuesta a éstas preocupaciones se desarrolló <code class="code-text">ECMAScript 6</code> también conocido
+                                        como <code class="code-text">ES6</code> ó <code class="code-text">ES2015</code>, mejorando las funcionalidades para
+                                        <b>Carga de Módulos</b>, pero también la propia <b>Arquitectura</b> del lenguaje y su sintaxis, la introducción de
+                                        programación basado en clases fue una oportunidad para adoptar un enfoque más de <b>Programación Orientada a Objetos
+                                            (POO)</b>, cuando se construyen aplicaciones a gran escala.
+                                    </p>
+                                    <p>
+                                        El objetivo es convertir <b>Javascript</b> en un lenguaje capaz de desarrollar aplicaciones empresariales, como lo
+                                        hacen <b>java</b> ó <b>C++</b>, mejorando las herramientas y sistemas de análisis del código. Insistir en que
+                                        <b>TypeScript</b> es un super conjunto de <b>ECMAScript 6</b>, así que si conoces ECMAScript 6 ya tienes mucho más
+                                        avanzado para usar TypeScript ó TypeScript te puede servir para introducirte aprender ECMAScript 6, todas las
+                                        características adicionales que incluye TypeScript que no está en ECMAScript 6, son totalmente opcionales.
+                                    </p>
+                                    <p>
+                                        Antes de empezar a ver en detalle el lenguaje, reunimos un grupo de sitios impresindibles para el trabajo diario con
+                                        TypeScript:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            El primero es el <a href="https://www.typescriptlang.org/" target="_blank">sitio oficial</a> muy completo, pero
+                                            en el que destaca sobre todo la <code class="code-text">Documentation</code> con información muy completa que se
+                                            está actualizando constantemente. También destacar el <code class="code-text">Playground</code>, se trata de un
+                                            auténtico sandbox que yá incluye trozos de código TypeScript, que hacen referencia a sus características más
+                                            comunes, y se vé como inmediatamente lleva su conversión a Javascript plano, puedes utilizarlo para
+                                            familiarizarte con su arquitectura y sintaxis, también nos vá a servir para ir provando los ejemplos que vayamos
+                                            viendo en el curso
+                                        </li>
+                                        <br>
+                                        <li>
+                                            El código para TypeScript es completamente <b>Open Source</b> lo tienes completo en <a
+                                                href="https://github.com/Microsoft/TypeScript" target="_blank">GitHub</a> y los desarrolladores han hecho un
+                                            grán esfuerzo para documentar las diferentes facetas del código que se encuentran en una Wiki disponible en el
+                                            sitio del repositorio en GitHub, un magnífico recurso para encontrar respuestas a dudas, o para profundizar en
+                                            algunas de las características del lenguaje y su sintaxis.
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        Trabajar con TypeScript ó con cualquier otro lenguaje de programación, significa básicamente trabajar con datos, y
+                                        tales datos puede representar diferentes tipos de contenidos, ésto es lo que se conoce en programación como tipos
+                                        <b>(Types)</b> un nombre usado para representar el hecho de que los datos pueden ser texto string, un valor entero ó
+                                        un array de estos tipos de valores, ésto no es nada nuevo en Javascript donde siempre se trabaja de modo implísito
+                                        con tipos (Types) péro de una forma flexible, ésto significa que cualquier variable dada puede asumir o devolver en
+                                        el caso de funciones, cualquier tipo de valor, péro esto aveces lleva a errores y excepciones en nuestro código por
+                                        colición de tipos entre lo que nuestro código devuelve y lo que esperábamos que debía devolver, por eso en
+                                        ECMAscript 6 y en TypeScript por lo tanto se utiliza en denominado, tipado estático que nos garantiza saber que tipo
+                                        de dato nos vamos encontrar en cada instancia de código muy valioso para ayudar a depurar nuestras aplicaciones en
+                                        tiempo de compilación.
+                                    </p>
+                                    <p>
+                                        Probablemente uno de los más ampliamente usados tipos primitivos en nuestro código será el tipo <b>string</b> en el
+                                        que poblamos una variable con un trozo de texto.
+                                    </p>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #second_step>
+                                <ng-template matStepLabel>Empezando con TypeScript</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>2 - Empezando con TypeScript</h1>
+                                    <p>
+                                        <b>TypeScript</b> es un lenguaje de programación moderno que permite crear aplicaciones web robustas en JavaScript.
+                                        TypeScript no requiere de ningún tipo de plugin, puesto que lo que hace es generar código JavaScript que se ejecuta
+                                        en cualquier navegador, plataforma o sistema operativo.
+                                    </p>
+                                    <p>
+                                        <b>TypeScript</b> es un "transpilador", es decir, un compilador que se encarga de traducir las instrucciones de un
+                                        lenguaje a otro, aqui lo llamaremos también pre-compilador ya que este realmente intenta realizar las funciones de
+                                        un compilandor más las funciones de un traductor de instrucciones.
+                                    </p>
+                                    <p>
+                                        <em>TypeScript es un lenguaje pre-compilado, es decir, un lenguaje el cual será compilado finalmente a
+                                            javascript</em>, la versión del javascript en la cual será compilado junto con otras configuraciones estará en
+                                        el archivo <b>tsconfig</b>, TypeScript nos proporciona una serie de ventajas sobre javascript, o ES2016,.., ya que
+                                        tiene una serie de caracteristicas que ES* no suele tener, como por ejemplo:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Interfaces
+                                        </li>
+                                        <li>
+                                            Clases (Clases de verdad)
+                                        </li>
+                                        <li>
+                                            Es furtemente tipado
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        Aparte de estas características TS tiene más características, pero quizás la más importante sea que gracias a el
+                                        tiempo de debuggin es reducido ya que, para poder debuggear código javascript en la actualidad, este tiene que ser
+                                        ejecutado en la aplicación y se le debe sumar el tiempo que se tarde en la detección del fallo, mientras que con
+                                        TypeScript el código simplemente no será compilado y nos dará un error en la compilación diciéndonos donde se
+                                        encuentra el error.
+                                    </p>
+                                    <p>
+                                        En lo referente a las interfaces, estas ni siquiera serán escritas en el código final, simplemente será el mismo
+                                        transpilador de TypeScript el que se encargará de que el <b>"Contrato"</b> sea cumplido, las interfaces en
+                                        TypeScript pueden ser heredadas esto lo veremos más adelante.
+                                    </p>
+                                    TypeScript es fuertemente tipado ya que requiere de que se le especifiquen los tipos de datos que se quieren utilizar
+                                    (en caso de que no se especifiquen serán de tipo <b>ANY</b>, pero eso lo veremos más adelante).
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #third_step>
+                                <ng-template matStepLabel>Instalación del entorno de desarrollo</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>3 - Instalación del entorno de desarrollo</h1>
+                                    <p>
+                                        La instalación de <b>TypeScript</b> es relativamente simple, únicamente necesitamos la instalación de un servidor <b>NodeJS</b> y con el gestor de paquetes <b>npm</b> para descargarnos el transpilador <b>TypeScript</b>
+                                    </p>
+                                    <p>
+                                        Para descargar <b>NodeJS</b> hay que ir a <a href="https://nodejs.org/es/" target="_blank">nodejs.org</a>
+                                    </p>
+                                    <p>
+                                        <code>node -v</code>
+                                    </p>
+                                    <p>
+                                        Si nos dice la versión de NodeJS que tenemos proseguiremos con el siguiente paso la descarga de TypeScript para ello abriremos una terminal y escribiremos esto (Windows\/Linux\/Mac)
+                                    </p>
+                                    <p>
+                                        <code>npm install -g typescript</code>
+                                    </p>
+                                    <p>
+                                        Para comprobar la correcta instalación de TypeScript y la versión que se a instalado escribimos
+                                    </p>
+                                    <p>
+                                        <code>tsc -v</code>
+                                    </p>
+                                    <p>
+                                        instalación de los tsd de nodejs
+                                    </p>
+                                    <p>
+                                        <code>npm install tsd -g</code>
+                                    </p>
+                                    <p>
+                                        <b>tsc = TypeScript Console</b>
+                                    </p>
+                                    <p>
+                                        El siguiente paso será crear una carpeta donde trabajar para ello dependiendo de nuestro sistema operativo podremos utilizar un ejecutable u otro para crear una carpeta o simplemente hacerlo desde la interfaz gráfica, una vez creada navegaremos a través de la terminal a la carpeta recién creada y escribiremos el siguiente comando
+                                    </p>
+                                    <p>
+                                        <code>tsc --init</code>
+                                    </p>
+                                    <p>
+                                        Con este comando generaremos el archivo de configuración básico que utilizará TypeScript para compilar la información.
+                                    </p>
+                                    <pre><code [highlight]="code"></code></pre>
+                                    <p>
+                                        La presencia de este archivo significa que este directorio es la raíz del proyecto.
+                                    </p>
+                                    <p>
+                                        Para que se compile un fichero TypeScripte tienes que utilizar el siguiente comando
+                                    </p>
+                                    <p>
+                                        <code>tsc -w</code>
+                                    </p>
+                                    <p>
+                                        Si al realizar esta instalación ocurre algún error, una alternativa para practicar sería <a href="https://www.typescriptlang.org/play/index.html">la página de pruebas de TypeScript</a>
+                                    </p>
+                                    <h1>IDE - Visual Studio Code</h1>
+                                    <p>
+                                        <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> En Visual Code es un entorno de desarrolladores de <b>Microsoft</b>, pero de código abierto, la razón por la que aparece este entorno de desarrollo, es porque ni más ni menos que <b>Microsoft</b> es el creador de <b>Typescript</b>, VS Code es un IDE que nos permitirá automatizar tareas para ello abrimos el menú pulsando el <code class="code-text">F1</code> y escribimos <code class="code-text">Configure task Runner</code> hacemos click y seleccionamos <code class="code-text">tsconfig.json</code> esto nos generará una carpeta llamada y dentro de ella un archivo llamado <code class="code-text">task.json</code> que sería así:
+                                    </p>
+                                    <pre><code [highlight]="code2"></code></pre>
+                                    <h2>Buscador</h2>
+                                    <p>Para buscar en todos los ficheros de un proyecto utilizamos <code class="code-text">ctrl + alt + t</code></p>
+                                    <h2>Debuggin</h2>
+                                    <p>Para poder debuggear en Visual Code ts, necesitamos configurar el archivo de
+                                        configuración <code class="code-text">tsconfig</code> y en la línea <code class="code-text">sourceMap</code> la ponemos a true dejando el fichero de
+                                        configuración de la siguiente forma:</p>
+                                    <pre><code [highlight]="code3"></code></pre>
+                                    <p>Una vez modificada esa línea se generará un archivo .map con el mismo nombre del
+                                        archivo <code class="code-text">.ts</code> que tengamos en ese archivo .map estarán asociadas las líneas del archivo
+                                        .js compilado y la línea del archivo <code class="code-text">.ts</code> una vez modificado, pondremos el punto de
+                                        debug donde deseemos y presionaremos <code class="code-text">F5</code> para ejecutar el código aparecerá un dialogo
+                                        que nos preguntará que tipo de servidor queremos elegir, elegiremos <code class="code-text">NodeJS</code> y
+                                        configuraremos el archivo de configuración para que quede así:</p>
+                                    <pre><code [highlight]="code4"></code></pre>
+                                    <p>Las líneas modificadas del original han sido las siguientes:</p>
+                                    <pre><code [highlight]="code5"></code></pre>
+                                    <p>Para debuggear al siguiente punto de debug utilizamos el botón <code class="code-text">F10</code> y para un paso más controlado un <code class="code-text">F11</code></p>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #quarter_step>
+                                <ng-template matStepLabel>Tutorial</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>4 - Tutorial</h1>
+                                    <p>
+                                        En este tutorial verá la parte introductoria de TypeScript.
+                                    </p>
+                                    <ng-container *ngIf="stepper.selected == quarter_step">
+                                        <div style="text-align: center;">
+                                            <button *ngIf="ytEvent !== 1"
+                                                type="button"
+                                                class="btn btn-primary"
+                                                (click)="playVideo()"
+                                                mat-fab color="primary">
+                                                Play >
+                                            </button>
+                                            <button *ngIf="ytEvent === 1"
+                                                type="button"
+                                                class="btn btn-danger"
+                                                (click)="pauseVideo()"
+                                                mat-fab color="primary">
+                                                Pausa ||
+                                            </button>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <youtube-player
+                                                [videoId]="id"
+                                                (ready)="savePlayer($event)"
+                                                (change)="onStateChange($event)"
+                                                [playerVars]="playerVars">
+                                            </youtube-player>
+                                        </div>
+                                    </ng-container>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="done green-600" (click)="stepper.reset()">
+                                        <mat-icon>check</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                    </mat-horizontal-stepper>
+                </div>
+            </div>
     
         </div>
         <!-- / CONTENT -->
-    
-        <div class="step-navigation">
 
-            <button mat-fab class="previous mat-accent fuse-white-fg"
-                    (click)="gotoPreviousStep()"
-                    [disabled]="currentStep === 0"
-                    [fxHide]="currentStep === 0">
-                <mat-icon>chevron_left</mat-icon>
-            </button>
-    
-            <button mat-fab class="next mat-accent fuse-white-fg"
-                    (click)="gotoNextStep()"
-                    [disabled]="currentStep === course.totalSteps - 1"
-                    [fxHide]="currentStep === course.totalSteps - 1">
-                <mat-icon>chevron_right</mat-icon>
-            </button>
-    
-            <button mat-fab class="done green-600"
-                    routerLink="/apps/academy/courses"
-                    [disabled]="currentStep !== course.totalSteps - 1"
-                    [fxShow]="currentStep === course.totalSteps - 1">
-                <mat-icon>check</mat-icon>
-            </button>
-    
-        </div>
-    
     </div>
     <!-- / CENTER -->
-    
+
 </div>
