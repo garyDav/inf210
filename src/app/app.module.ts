@@ -20,6 +20,8 @@ import { SlideshowModule } from 'ng-simple-slideshow';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FakeDbService }  from './fake-db/fake-db.service';
 
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
+
 import { AppComponent } from 'app/app.component';
 import { LayoutModule } from 'app/layout/layout.module';
 import { IntroductionModule } from './main/introduction/introduction.module';
@@ -40,7 +42,7 @@ const appRoutes: Routes = [
     },
     {
         path        : '**',
-        redirectTo  : 'introduction'
+        redirectTo  : 'home'
     },
     {
         path        : 'first-steps',
@@ -75,6 +77,7 @@ const appRoutes: Routes = [
 
         TranslateModule.forRoot(),
         SlideshowModule,
+        NgxYoutubePlayerModule.forRoot(),
 
         // Material moment date module
         MatMomentDateModule,

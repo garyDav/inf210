@@ -107,7 +107,7 @@ section h1 {
   margin-bottom: 40px;
 }
 
-.bloque h1 { 
+.bloque h1 {
   text-align: center;
   margin: 0;
 
@@ -140,4 +140,31 @@ section h1 {
 
 .parallax.imagen-3 {
   background-image: url('assets/images/home/image3.png');
+}
+
+@media(max-width: 780px) {
+  .bloque h1 {
+    font-size: 100px;
+  }
+}
+
+@media(max-width: 500px) {
+  .geting {
+    grid-template: 1fr / 1fr;
+    grid-template-areas: "logo" "des" "learn";
+  }
+  .bloque h1 {
+    font-size: 50px;
+  }
+}
+
+@media(max-width: 480px) {
+  .subbloque {
+    grid-template: 1fr / 1fr !important;
+    text-align: center;
+  }
+  .subbloque-2 {
+    grid-template: 1fr / 1fr !important;
+    text-align: center;
+  }
 }
