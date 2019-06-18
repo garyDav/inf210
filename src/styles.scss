@@ -4,6 +4,8 @@
 // Import app.theme.scss
 @import "app/app.theme";
 
+@import '~highlight.js/styles/github.css';
+
 .clearLink {
   text-decoration: none !important;
 }
