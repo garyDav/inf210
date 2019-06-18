@@ -3,7 +3,7 @@
   <div class="center">
       <!-- HEADER -->
       <div class="header accent p-24" fxLayout="row" fxLayoutAlign="start center">
-          <button mat-icon-button class="mr-16" [routerLink]="'/home'">
+          <button mat-icon-button class="mr-16" [routerLink]="'/introduction'">
               <mat-icon>arrow_back</mat-icon>
           </button>
 
@@ -24,15 +24,9 @@
                               <ng-template matStepLabel>Tipos de datos</ng-template>
                               <div style="text-align: left;">
                                   <h1>1 - Tipos de datos</h1>
-                                  <p><b>TypeScript</b> es un lenguaje que añade a <b>JavaScript</b> una capa de tipado estático y algunas
-                                    otras incorporaciones de <b>OOP tradicional</b>. Esta capa puede resultarnos de muchísima
-                                    ayuda durante el desarrollo. Sin embargo, todas estas características son simplemente para
-                                    ayudar a trabajar con JavaScript en tiempo de diseño, ya que <b>TypeScript</b> compila todo
-                                    como JavaScript tradicional.</p>
-                                  <p>Tipado estático o fuertemente tipado: Se debe de definir el tipo de dato, obligando a que no
-                                    pueda haber errores con los tipos de datos.</p>
-                                  <p>Tipado dinámico o débilmente tipado: No se deben de o tiene porque especificar el tipo de
-                                    dato (PHP, Javascript).</p>
+                                  <p><b>TypeScript</b> es un lenguaje que añade a <b>JavaScript</b> una capa de tipado estático y algunas otras incorporaciones de <b>OOP tradicional</b>. Esta capa puede resultarnos de muchísima ayuda durante el desarrollo. Sin embargo, todas estas características son simplemente para ayudar a trabajar con JavaScript en tiempo de diseño, ya que <b>TypeScript</b> compila todo como JavaScript tradicional.</p>
+                                  <p>Tipado estático o fuertemente tipado: Se debe de definir el tipo de dato, obligando a que no pueda haber errores con los tipos de datos.</p>
+                                  <p>Tipado dinámico o débilmente tipado: No se deben de o tiene porque especificar el tipo de dato (PHP, Javascript).</p>
                                   <p>Porque <b>typescript</b> es fuertemente tipado</p>
                                   <pre><code [highlight]="code1"></code></pre>
                                   <p>Estos ejemplos son posibles problemas que tienen los lenguajes débilmente tipadas</p>
@@ -58,6 +52,143 @@
                                   <h2>String literal type</h2>
                                   <p>Podemos crear un string literal como un type. Por ejemplo:</p>
                                   <pre><code [highlight]="code8"></code></pre>
+                                  <p>La variable que acabamos de crear nada más que podrá contener el valor que le hemos asignado, es decir 'Hola'.</p>
+                                  <pre><code [highlight]="code9"></code></pre>
+                                  <p>Por si solo no tiene una gran utilidad por lo que se combina con union types, type guards, y type alias. Los cuales explicaremos más tarde.</p>
+                                  <pre><code [highlight]="code10"></code></pre>
+                                  <h2>Array</h2>
+                                  <p>Arrays, sino se les especifica tipo son <b>ANY</b></p>
+                                  <pre><code [highlight]="code11"></code></pre>
+                                  <p>Con esta sintaxis se puede especificar qué tipo de datos debe haber en el array</p>
+                                  <pre><code [highlight]="code12"></code></pre>
+                                  <h2>Null</h2>
+                                  <p>Es cuando un objeto o variable no esta accesible.</p>
+                                  <h2>Undefined</h2>
+                                  <p>Es cuando un objeto o variabe existe pero no tiene un valor. Si nuestro código interactua con alguna API podemos recibir null como respuesta, para evaluar esas respuestas es mejor utilizar <code class="code-text">==</code> en vez de <code class="code-text">===</code></p>
+                                  <pre><code [highlight]="code13"></code></pre>
+                                  <h1>Tuple / Tuplas</h1>
+                                  <p>Como en base de datos, hacen referencia a registros clave / valor</p>
+                                  <pre><code [highlight]="code14"></code></pre>
+                                  <p>Para acceder a los datos dentro de las tuplas de las cuales sabes el índice se hace así:</p>
+                                  <pre><code [highlight]="code15"></code></pre>
+                                  <p>Cuando queramos acceder a un elemento sin conocer el mapeo del contenido</p>
+                                  <pre><code [highlight]="code16"></code></pre>
+                                  <h1>Enum</h1>
+                                  <p>Los enumerado en <b>TypeScript</b>, son distintos a los enumerados de otros lenguajes de programación, estos solo almacenan números para identificar las constantes.</p>
+                                  <p>Si no se le especifica el valor por defecto se lo asigna normalmente, también es importante saber, que los enumerados no aceptan que su valor sea un String, solamente número</p>
+                                  <pre><code [highlight]="code17"></code></pre>
+                                  <p>Sin asignación de valor</p>
+                                  <pre><code [highlight]="code18"></code></pre>
+                                  <p>Con asignación de valor</p>
+                                  <pre><code [highlight]="code19"></code></pre>
+                                  <p>También se puede acceder al nombre de los atributos</p>
+                                  <pre><code [highlight]="code20"></code></pre>
+                                  <p>Es muy importante saber que distintos enumerados no pueden ser comparados ya que el nombre de los enumerados no es el mimo, aunque puedan tener el mismo indice númerico.</p>
+                                  <p>Para comprobar lo que digo utilizaré Type alias, y el ejemplo es el siguinte:</p>
+                                  <pre><code [highlight]="code21"></code></pre>
+                                  <h1>Any</h1>
+                                  <p>Puede ser cualquier tipo de objeto de javascript</p>
+                                  <pre><code [highlight]="code22"></code></pre>
+                                  <h1>Void</h1>
+                                  <pre><code [highlight]="code23"></code></pre>
+                                  <p>Este tipo de dato no es recomendable para variables ya que solo pueden ser asignados valores null o undefined</p>
+                                  <pre><code [highlight]="code24"></code></pre>
+                                  <h1>Let</h1>
+                                  <p>En javascript hay dos formas de declarar variables: <code class="code-text">var</code> y <code class="code-text">let</code>, var no tiene un ámbito de bloque mientras que <code class="code-text">let</code> sí.</p>
+                                  <code class="code-blockquotes">var</code>
+                                  <pre><code [highlight]="code25"></code></pre>
+                                  <code class="code-blockquotes">let</code>
+                                  <pre><code [highlight]="code26"></code></pre>
+                                  <h1>Const</h1>
+                                  <p>Ha sido añadido en ES6 / TypeScript permitiendonos añadir variables inmutables tanbien conocidas como constantes. El uso de <code class="code-text">const</code> es una buena práctica de mantenimiento y legibilidad. <b>Las constantes deben ser declaradas y asignadas siempre</b>.</p>
+                                  <pre><code [highlight]="code27"></code></pre>
+                                  <p>Las constantes también admiten objetos literales como por ejemplo:</p>
+                                  <pre><code [highlight]="code28"></code></pre>
+                                  <p>Pero si se puede modificar el contenido de las variables que contiene el objeto literal, ejemplo:</p>
+                                  <pre><code [highlight]="code29"></code></pre>
+                                  <h1>For in</h1>
+                                  <p>For in es una característica que ya tenia javascript ,y no ha sido mejorada en TypeScript, mediante la cual puedes acceder y recorrer objetos y arrays y obtener tanto los índices como los valores.</p>
+                                  <p>For in accediendo al valor de una variable dentro de un objeto:</p>
+                                  <code class="code-blockquotes"><b>TypeScript</b></code>
+                                  <pre><code [highlight]="code30"></code></pre>
+                                  <code class="code-blockquotes"><b>Javascript</b></code>
+                                  <pre><code [highlight]="code31"></code></pre>
+                                  <p><code class="code-text">For in</code> accediendo al índice de una variable dentro de un objeto;</p>
+                                  <code class="code-blockquotes"><b>TypeScript</b></code>
+                                  <pre><code [highlight]="code32"></code></pre>
+                                  <code class="code-blockquotes"><b>Javascript</b></code>
+                                  <pre><code [highlight]="code33"></code></pre>
+                                  <h1>For of</h1>
+                                  <p><code class="code-text">For of</code> es una característica nueva de ES6 con la <b>cual puedes acceder y recorrer arrays y strings obteniendo su valor</b>, es decir, no puede recorrer objetos. Aunque se podrían recorrer objetos en el caso de que estos fueran creados por clases que implementen <code class="code-text">Symbol.iterator</code> . <code class="code-text">for ... of</code> también tiene un peor rendimiento en comparación con el <code class="code-text">for...in</code> ya que al compilarlo a JS crea más variables y hace más comprobaciones.</p>
+                                  <p>For of accediendo al valor de una variable dentro de un array:</p>
+                                  <code class="code-blockquotes"><b>TypeScript</b></code>
+                                  <pre><code [highlight]="code34"></code></pre>
+                                  <code class="code-blockquotes"><b>Javascript</b></code>
+                                  <pre><code [highlight]="code35"></code></pre>
+                                  <p>For of accediendo al valor de una variable dentro de un string:</p>
+                                  <code class="code-blockquotes"><b>TypeScript</b></code>
+                                  <pre><code [highlight]="code36"></code></pre>
+                                  <code class="code-blockquotes"><b>Javascript</b></code>
+                                  <pre><code [highlight]="code37"></code></pre>
+                                  <p>For of accediendo al valor de una variable dentro de un objeto, el cual nos dará error:</p>
+                                  <code class="code-blockquotes"><b>TypeScript</b></code>
+                                  <pre><code [highlight]="code38"></code></pre>
+                                  <code class="code-blockquotes"><b>Javascript</b></code>
+                                  <pre><code [highlight]="code39"></code></pre>
+                                  <p>El error según el transpilador de <b>TypeScript</b> Es el siguiente:</p>
+                                  <img src="assets/content/img1.png" alt="img">
+                                  <h1>Funciones</h1>
+                                  <p>Este tipo de función hace referencia al objeto que llama a esta función</p>
+                                  <pre><code [highlight]="code40"></code></pre>
+                                  <p>Este tipo de funciones, lo que hacen es que el this no hace referencia al padre sino al objeto que contiene la función</p>
+                                  <pre><code [highlight]="code41"></code></pre>
+                                  <p>Ejemplos sobre como evitar el tipo Any y filtrar solo por los tipos de datos que necesitamos</p>
+                                  <pre><code [highlight]="code42"></code></pre>
+                                  <p><b>TypeScript</b> admite que se declaren parametros opcionales de la siguiente forma utilizando la <code class="code-text">?</code>:</p>
+                                  <pre><code [highlight]="code43"></code></pre>
+                                  <h2>Igualación de funciones</h2>
+                                  <p>En javascript las funciones pueden ser igualadas, <b>TypeScript</b> junto con su nueva sintáxis también permite este comportamiento como por ejemplo, utilizando las <b>fat arrow</b>:</p>
+                                  <pre><code [highlight]="code44"></code></pre>
+                                  <pre><code [highlight]="code45"></code></pre>
+                                  <h1>Genéricos</h1>
+                                  <p>Los tipos genéricos, son aquellos que como las interfaces no se verán compilados en Javascript ya que solo están accesibles en tiempo de compilación, La manera adecuada de realizar la sobrecarga de métodos es con los tipos genéricos un ejemplo sería así:</p>
+                                  <code class="code-blockquotes">Versión TypeScript</code>
+                                  <pre><code [highlight]="code46"></code></pre>
+                                  <code class="code-blockquotes">Versión Javascript (Ya compilado)</code>
+                                  <pre><code [highlight]="code47"></code></pre>
+                                  <p>La diferencia entre esta forma y la otra, es que de esta forma, podríamos recibir cualquier tipo de objeto, y no deberíamos especificar el tipo de objeto que esperamos, esto esta muy bien ya que está diseñado para los objetos que no son primitivos de javascript. Con esto evitamos el <b>Any</b> y mejoraría la manera de realizar la sobrecarga (Lejos de como sería en Java o C#).</p>
+                                  <p>Con los tipos genéricos se debe tener cuidado, ya que no todos los métodos estan disponibles para todos lo tipos de objetos.</p>
+                                  <code class="code-blockquotes">TypeScript</code>
+                                  <pre><code [highlight]="code48"></code></pre>
+                                  <code class="code-blockquotes">Javascript</code>
+                                  <pre><code [highlight]="code49"></code></pre>
+                                  <p>Como se puede apreciar en este ejemplo podemos declarar una función dentro de una clase que devolverá lo que le pasemos por parametro, permitiendonos así modificar los returns de nuestras funciones según queramos.</p>
+                                  <p>Para poder pasar como parametro a una función y asegurarnos de que ese parámetro tiene un método en concreto deberemos implementar una interfaz y forzar al parámetro que se le pasará a la función a utilizar dicha interfaz.</p>
+                                  <code class="code-blockquotes">TypeScript Nota: Es muy importante que veaís que cuando se implementa una interfaz en un parámetro utilizamos la palabra reservada <b>extends</b> y no la palabra reservada <b>implements</b></code>
+                                  <pre><code [highlight]="code50"></code></pre>
+                                  <code class="code-blockquotes">Javascript</code>
+                                  <pre><code [highlight]="code51"></code></pre>
+                                  <p>También podemos hacer que los atributos que intentamos modificar se encuentren dentro del tipo de objeto que le pasa, eso sería de la siguiente forma.</p>
+                                  <pre><code [highlight]="code52"></code></pre>
+                                  <h1>Aserción de tipos (Assert)</h1>
+                                  <pre><code [highlight]="code53"></code></pre>
+                                  <p>Y si ahora añadieramos una clase más este condicional no controlaria esa situación, en este ejemplo al ser tan simple se ve claro, pero en clases más complejas con lógicas más complejas puede llegar ha ser un gran problema.</p>
+                                  <h1>Type Alias</h1>
+                                  <p>Los <b>Type Alias</b> son exactamente los mismos tipos dedatos y valores originales solo que con nombres alternativos, esto sirve para darle más semántica al lenguaje.</p>
+                                  <p>ype alias utiliza la palabra reservada <code class="code-text">type</code> para funcionar:</p>
+                                  <pre><code [highlight]="code54"></code></pre>
+                                  <p>los <b>Type alias</b> no solo pueden ser tipos de datos generícos, también se pueden utilizar parametros como por ejemplo:</p>
+                                  <pre><code [highlight]="code55"></code></pre>
+                                  <p>También puede hacer referencia a sí mismo:</p>
+                                  <pre><code [highlight]="code56"></code></pre>
+                                  <p>El operador <code class="code-text">&</code> se utiliza para crear un tipo de dato base como por ejemplo:</p>
+                                  <pre><code [highlight]="code57"></code></pre>
+                                  <h1>Type Union</h1>
+                                  <p>Implica que solo los métodos que sean iguales de ambas interfaces o clases (solamente el nombre del método sean iguales, el contenido puede ser distinto) podrán ser utilizados allí donde se utilicen métodos de unión como el siguiente ejemplo:</p>
+                                  <pre><code [highlight]="code58"></code></pre>
+                                  <h1>Type Guards</h1>
+                                  <p>Son las maneras de controlar los tipos de datos\/objetos que se están utilizando, esto rompe con la programación orientada a objetos ya que esto representa un problema para el polimorfismo, por ejemplo: si estuvieramos haciendo una serie de comprobaciones para que según el tipo de clase u objeto se realize una acción u otra en el momento en el que existiera un objeto o clase que no tuvieramos contemplado tendriamos que modificar todo el código.</p>
+                                  <pre><code [highlight]="code59"></code></pre>
                               </div>
                               <div class="step-navigation">
                                   <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
@@ -66,9 +197,37 @@
                               </div>
                           </mat-step>
                           <mat-step #second_step>
-                              <ng-template matStepLabel>second_step</ng-template>
+                              <ng-template matStepLabel>Fat arrow</ng-template>
                               <div style="text-align: left;">
-                                  <h1>2 - </h1>
+                                  <h1>2 - Fat arrow</h1>
+                                  <p>Las funciones <b>fat arrow</b> se utilizan en para:</p>
+                                  <ul>
+                                  <li>
+                                      Omitir la palabrá <code class="code-text">function</code>
+                                      <pre><code [highlight]="code60"></code></pre>
+                                  </li>
+                                  <li>
+                                      Para capturar el <code class="code-text">this</code> , ya que en javascript se pierde muy rapidamente el contexto de <code class="code-text">this</code> como por ejemplo en la siguiente situación:
+                                      <pre><code [highlight]="code61"></code></pre>
+                                      <p>Esto es debido a que el <code class="code-text">this</code> que ejecuta la función <code class="code-text">growOld</code> en javascrirpt es <code class="code-text">window</code> y no <code class="code-text">Person</code>. Si utilizaramos una función con fat arrow funciona, esta funcionaría.</p>
+                                      <pre><code [highlight]="code62"></code></pre>
+                                      <p>Otra solución sería mezclar las 2 sintaxis</p>
+                                      <pre><code [highlight]="code63"></code></pre>
+                                  </li>
+                                  <li>Para capturar argumentos</li>
+                                  </ul>
+                                  <h2>¿Cuándo es necesario utilizar una fat arrow?</h2>
+                                  <p>Es necesario utilizarla cuando la función va ha ser llamada por otra clase o por otro método de la siguiente forma:</p>
+                                  <pre><code [highlight]="code64"></code></pre>
+                                  <h2>Como utilizarlas con librerías que utilizan <code class="code-text">this</code></h2>
+                                  <p>Existen muchas librerías como por ejemplo jQuery, para trabajar con este tipo de librerías utilizamos variables auxiliares como por ejemplo <code class="code-text">_self</code></p>
+                                  <pre><code [highlight]="code65"></code></pre>
+                                  <h2>¿Cómo utilizar funciones con herencia?</h2>
+                                  <p>En caso de que quieras sobreescribir una función de la clase padre siempre deberemos realizar una copia de este, por ejemplo:</p>
+                                  <pre><code [highlight]="code66"></code></pre>
+                                  <h2>Cadenas de fat arrow (Currying)</h2>
+                                  <p>Es una seríe de funciones encadenadas el uso es simple y es el siguiente:</p>
+                                  <pre><code [highlight]="code67"></code></pre>
                               </div>
                               <div class="step-navigation">
                                   <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
@@ -80,9 +239,21 @@
                               </div>
                           </mat-step>
                           <mat-step #third_step>
-                              <ng-template matStepLabel>third_step</ng-template>
+                              <ng-template matStepLabel>Des / Est</ng-template>
                               <div style="text-align: left;">
-                                  <h1>3 - </h1>
+                                  <h1>3 - Desestructuración</h1>
+                                  <p>La desestructuración nos permite extraer valores almacenados en arrays u objetos.</p>
+                                  <code class="code-blockquotes">Desestructuración de objetos</code>
+                                  <pre><code [highlight]="code68"></code></pre>
+                                  <code class="code-blockquotes">Desestructuración de arrays</code>
+                                  <pre><code [highlight]="code69"></code></pre>
+                                  <code class="code-blockquotes">Desestructuración de arrays con estructuración</code>
+                                  <pre><code [highlight]="code70"></code></pre>
+                                  <h1>Estructuración</h1>
+                                  <p>La estructuración de parámetros es una forma rápida de que por ejemplo una función acepte una gran cantidad de parámetros como array.</p>
+                                  <pre><code [highlight]="code71"></code></pre>
+                                  <p>También se puede hacer asignaciones con array, como por ejemplo:</p>
+                                  <pre><code [highlight]="code72"></code></pre>
                               </div>
                               <div class="step-navigation">
                                   <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
@@ -94,38 +265,93 @@
                               </div>
                           </mat-step>
                           <mat-step #quarter_step>
-                              <ng-template matStepLabel>quarter_step</ng-template>
+                              <ng-template matStepLabel>Promesas</ng-template>
                               <div style="text-align: left;">
-                                  <h1>4 - </h1>
-                                  <p>
-                                      En este tutorial verá la parte introductoria de TypeScript.
-                                  </p>
-                                  <ng-container *ngIf="stepper.selected == quarter_step">
-                                      <div style="text-align: center;">
-                                          <button *ngIf="ytEvent !== 1"
-                                              type="button"
-                                              class="btn btn-primary"
-                                              (click)="playVideo()"
-                                              mat-fab color="primary">
-                                              Play >
-                                          </button>
-                                          <button *ngIf="ytEvent === 1"
-                                              type="button"
-                                              class="btn btn-danger"
-                                              (click)="pauseVideo()"
-                                              mat-fab color="primary">
-                                              Pausa ||
-                                          </button>
-                                      </div>
-                                      <div style="text-align: center;">
-                                          <youtube-player
-                                              [videoId]="id"
-                                              (ready)="savePlayer($event)"
-                                              (change)="onStateChange($event)"
-                                              [playerVars]="playerVars">
-                                          </youtube-player>
-                                      </div>
-                                  </ng-container>
+                                  <h1>4 - Promesas</h1>
+                                  <p>Las promesas representa un resultado eventual de una operación asincrónica, la primera manera de interactuar con un una promesa o promise es a través del método then el cual registra el callback que recivirá la respuesta o la razón por la cual la promesa no a podido ser cumplida.</p>
+                                  <h2>Estados</h2>
+                                  <p>Las promesas pueden estar en 3 estados <code class="code-text">pending</code> , <code class="code-text">fulfilled</code> y <code class="code-text">rejected</code></p>
+                                  <img src="assets/content/img2.png" alt="img">
+                                  <h2>Pending</h2>
+                                  <p>Cuando una promesa no se haya terminado aún pero aún no ha sido rechazada. (a la espera), y la respuesta podrá ser <code class="code-text">fulfilled</code> o <code class="code-text">rejected</code>.</p>
+                                  <h2>Fulfilled</h2>
+                                  <p>Cuando la respuesta ha sido devuelta y procesada correctamente, no podrá cambiar de estado y el valor no debe cambiar (debido a la promesa, por otro procesamiento sí).</p>
+                                  <h2>Rejected</h2>
+                                  <p>Cuando ha ocurrido un error en la promesa, el estado de la transición no debe cambiar y debe tener una razón por la cual a sucedido el error la cual no debe cambiar. para obtener los resultados <code class="code-text">rejected</code> utilizamos la palabra reservada <code class="code-text"></code>catch</p>
+                                  <code class="code-blockquotes">Cuando digo que algo no debe cambiar quiero decir que deberá ser comprobado con <code class="code-text">===</code> .</code>
+                                  <p><a href="https://github.com/promises-aplus/promises-spec" target="_blank">más información sobre promesas</a></p>
+                                  <h2>Ejemplos</h2>
+                                  <code class="code-blockquotes">Ejemplo de llamada a <code class="code-text">then</code></code>
+                                  <pre><code [highlight]="code73"></code></pre>
+                                  <code class="code-blockquotes">Ejemplo de llamada a <code class="code-text">catch</code></code>
+                                  <pre><code [highlight]="code74"></code></pre>
+                                  <h2>Cadenas de promesas o Chain-ability of Promises</h2>
+                                  <p>Una cadena de promesas es una manera muy útil de realizar peticiones asíncronas.</p>
+                                  <p>Sí una promesa hace un <code class="code-text">return</code> la cadena hace la siguiente petición al <code class="code-text">then</code></p>
+                                  <pre><code [highlight]="code75"></code></pre>
+                                  <p>Puedes manejar los esrrores añadiendole un método <code class="code-text">catch</code> a la cadena.</p>
+                                  <pre><code [highlight]="code76"></code></pre>
+                                  <p>También se puede hacer que un método <code class="code-text">catch</code> continue con la cadena de promesas, de la siguiente manera:</p>
+                                  <pre><code [highlight]="code77"></code></pre>
+                                  <p>Cualquier error ocurrido en un <code class="code-text">then</code> llamará al método <code class="code-text">catch</code> . Ej.:</p>
+                                  <pre><code [highlight]="code78"></code></pre>
+                                  <p>El hecho de que el primer <code class="code-text">then</code> al dar un error se salte el siguiente <code class="code-text">then</code> siendo una llamada asincrónica, nos provee con un nuevo paradicma el cual nos permite capturar mejor las excepciones asíncronas.</p>
+                                  <p>También es posible que algunas funciones puedan devolver promesas como por ejemplo:</p>
+                                  <pre><code [highlight]="code79"></code></pre>
+                                  <p>En el siguiente ejemplo veremos como se hace la carga de un <code class="code-text">JSON</code> de forma asíncrona:</p>
+                                  <pre><code [highlight]="code80"></code></pre>
+                                  <h2>Promesas en paralelo</h2>
+                                  <p>Como habréis observado previamente, hasta ahora todos los ejemplos que hemos visto heran peticiones en serie pero que sentido tiene eso si lo que queremos es una carga asincrónica de la información, pues no mucha es por eso que ahora veremos un ejemplo de como serían las peticiones en paralelo.</p>
+                                  <code class="code-blockquotes">TypeScript</code>
+                                  <pre><code [highlight]="code81"></code></pre>
+                                  <code class="code-blockquotes">Javascript</code>
+                                  <pre><code [highlight]="code82"></code></pre>
+                                  <p>Para poder testear esto ejecutaremos el javascript en nuestro serviudor node</p>
+                                  <code>node main.js</code>
+                                  <p><a href="https://www.typescriptlang.org/play/#src=%2F%2F--------%20main.ts%20---------%0D%0A%2F%2F%20Una%20funci%C3%B3n%20asincr%C3%B3na%20simulando%20la%20petici%C3%B3n%20desde%20el%20servidor%0D%0Afunction%20loadItem(id%3A%20number)%3A%20Promise%3C%7Bid%3A%20number%7D%3E%20%7B%0D%0A%20%20%20%20return%20new%20Promise((resolve)%3D%3E%7B%0D%0A%20%20%20%20%20%20%20%20console.log('loading%20item'%2C%20id)%3B%0D%0A%20%20%20%20%20%20%20%20setTimeout(()%20%3D%3E%20%7B%20%2F%2F%20simulate%20a%20server%20delay%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20resolve(%7B%20id%3A%20id%20%7D)%3B%0D%0A%20%20%20%20%20%20%20%20%7D%2C%201000)%3B%20%20%20%20%0D%0A%20%20%20%20%7D)%3B%0D%0A%7D%0D%0A%0D%0A%2F%2F%20Cadena%20(serie)%0D%0Alet%20item1%2C%20item2%3B%0D%0AloadItem(1)%0D%0A%20%20%20%20.then((res)%20%3D%3E%20%7B%0D%0A%20%20%20%20%20%20%20%20item1%20%3D%20res%3B%0D%0A%20%20%20%20%20%20%20%20return%20loadItem(2)%3B%0D%0A%20%20%20%20%7D)%0D%0A%20%20%20%20.then((res)%20%3D%3E%20%7B%0D%0A%20%20%20%20%20%20%20%20item2%20%3D%20res%3B%0D%0A%20%20%20%20%20%20%20%20console.log('done')%3B%0D%0A%20%20%20%20%7D)%3B%20%2F%2F%20overall%20time%20will%20be%20around%202s%0D%0A%0D%0A%2F%2F%20Paralelo%0D%0APromise.all(%5BloadItem(1)%2CloadItem(2)%5D)%0D%0A%20%20%20%20.then((res)%20%3D%3E%20%7B%0D%0A%20%20%20%20%20%20%20%20%5Bitem1%2Citem2%5D%20%3D%20res%3B%0D%0A%20%20%20%20%20%20%20%20console.log('done')%20%20%20%20%0D%0A%20%20%20%20%7D)%3B%20%2F%2F%20overall%20time%20will%20be%20around%201s" target="_blank">Ejemplo en el playground</a></p>
+                                  <h1>Generators</h1>
+                                  <p>Los <code class="code-text">generators</code> no pueden ser utilizados en <code class="code-text">es5</code> deben ser usados en <code class="code-text">es6</code> o superior.</p>
+                                  <p>Los generadores son funciones de las que se puede salir y volver a entrar. Su contexto (asociación de variables) será conservado entre las reentradas. Las reentradas son efectuadas gracias a la palabra reservada <code class="code-text">yield</code></p>
+                                  <p>Los generadores son funciones que debuelven un <code class="code-text">generator object</code> , hay dos grandes motivaciones para utilizar este tipo de funciones, una de ellas es que los <code class="code-text">generators</code> siguen la interfaz , <code class="code-text">iterator</code> permitiendo así utilizar los siguientes métodos <code class="code-text">next</code> , <code class="code-text">return</code> y <code class="code-text">throw</code> . Y la otra razón la veremos un poco más adelante.</p>
+                                  <pre><code [highlight]="code83"></code></pre>
+                                  <p>Como se puede apreciar este tipo de funciones devuelve junto con el resultado el estado de la iteración, si la iteración termina bien devuelve <code class="code-text">false</code> sino <code class="code-text">true</code> . Aunque eso no significa que la función parará cuando se llegue al final de la iteración de un array u objeto. por ejemplo:</p>
+                                  <pre><code [highlight]="code84"></code></pre>
+                                  <p>Es importante ver que <b>TypeScript</b> nos permitiría compilar esto y acceder a una variable que no existe. Ya que el lenguaje hasta el momento de la ejecución (tiempo de ejecución) no nos permite saber el número de veces que utilizamos el <code class="code-text">next()</code> .</p>
+                                  <pre><code [highlight]="code85"></code></pre>
+                                  <pre><code [highlight]="code86"></code></pre>
+                                  <p>Como se puede apreciar en el ejemplo, lo primero que se ejecuta es el texto <b>"Starting iteration"</b>, ya que no es hasta que ejecutemos el primer <code class="code-text">next()</code> , que empezaremos a ejecutar el método <code class="code-text">generator()</code> , dentro de esta función se pasa al método <code class="code-text">yield</code> (si es encontrada) en cuyo caso se resume el estado del método, y se espera hasta el siguiente <code class="code-text">next()</code> en el cual ejecutará el método desde el punto en el que se quedo en el estado anterior.</p>
+                                  <p>Este tipo de funciones también permite la inyección de variables como por ejemplo:</p>
+                                  <pre><code [highlight]="code87"></code></pre>
+                                  <pre><code [highlight]="code88"></code></pre>
+                                  <p>Otro ejemplo de argumentos sería el siguiente:</p>
+                                  <pre><code [highlight]="code89"></code></pre>
+                                  <p>El siguiente ejemplo es como se tratarían las excepciones:</p>
+                                  <pre><code [highlight]="code90"></code></pre>
+                                  <code class="code-blockquotes">Output</code>
+                                  <pre><code [highlight]="code91"></code></pre>
+                                  <p>Ahora veamos el output sin comentar esa línea:</p>
+                                  <pre><code [highlight]="code92"></code></pre>
+                                  <code class="code-blockquotes">Output</code>
+                                  <pre><code [highlight]="code93"></code></pre>
+                                  <p>La otra gran razón por la cual es tan importante la utilización de este tipo de métodos es porque con este tipo de métodos podemos mejorar el sistema de promesas y las peticiones asíncronas. como por ejemplo:</p>
+                                  <pre><code [highlight]="code94"></code></pre>
+                                  <h1>Esperas Asincrónicas - Async / Await</h1>
+                                  <p>Las <code class="code-text">async</code> no pueden ser utilizados en <code class="code-text">es5</code> deben ser usados en <code class="code-text">es6</code> o superior.</p>
+                                  <p>En <b>TypeScript</b> cuando código JS se está ejecutando (sincronamente) y utiliza una función la cual contiene una o más promesas se podrá utilizar la palabra reservada <code class="code-text">await</code> para parar la ejecución del código JS hasta que la función termine correctamente, en caso de fallo, está función generará un error de manera sincrona que podremos atrapar mediante un <code class="code-text">try catch</code> .</p>
+                                  <pre><code [highlight]="code95"></code></pre>
+                                  <ul>
+                                    <li>Si la función termina entonces devolverá un valor</li>
+                                    <li>Si la función falla devolverá un error que podremos capturar</li>
+                                  </ul>
+                                  <p>Esto convierte drasticamente la programación asíncrona tan fácil como la programación síncrona. ya que cumple 3 requisitos indispensables:</p>
+                                  <ol>
+                                    <li>Capacidad de pausar la función en tiempo de ejecución</li>
+                                    <li>Capacidad de pasarle valores a funciones</li>
+                                    <li>Capacidad de lanzar excepciones en caso de fallo</li>
+                                  </ol>
+                                  <p>El código que genera el ejemplo de arriba debería ya sonar de algo ya que esa es la sintaxís utilizada en <b>TypeScript</b>para crear <code class="code-text">generators</code> , es decir, el código previamente visto se convertiría en:</p>
+                                  <pre><code [highlight]="code96"></code></pre>
+                                  <p>Obviamente esto no es lo mismo que lo que se explica en la lección anterior sino una versión más compleja.</p>
                               </div>
                               <div class="step-navigation">
                                   <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>

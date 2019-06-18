@@ -1,0 +1,249 @@
+<div id="academy-course" class="page-layout simple left-sidebar inner-scroll">
+    <!-- CENTER -->
+    <div class="center">
+        <!-- HEADER -->
+        <div class="header accent p-24" fxLayout="row" fxLayoutAlign="start center">
+            <button mat-icon-button class="mr-16" [routerLink]="'/decorators'">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+  
+            <div>
+                <h2>Módulos</h2>
+            </div>
+  
+        </div>
+        <!-- / HEADER -->
+  
+        <!-- CONTENT -->
+        <div id="course-content" class="content">
+    
+            <div class="course-step">
+                <div class="course-step-content">
+                        <mat-horizontal-stepper #stepper>
+                            <mat-step #first_step>
+                                <ng-template matStepLabel>T. Carga Mod.</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>1 - Tipos de carga de módulos</h1>
+                                    <p>En la actualiad existen tres tipos de cargas de módulos, los módulos son una manera de llamar a las clases o métodos que deseamos exportar para que otras clases puedan utilizarlas mediante importaciones.</p>
+                                    <img src="assets/content/img3.png" alt="img">
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #second_step>
+                                <ng-template matStepLabel>ES6</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>2 - EcmaScript 6</h1>
+                                    <p>Es un lenguaje del lado del cliente y del servidor, es <b>Async + Sync</b>. Según las especificaciones de ES6 existen 2 tipos de exportación:</p>
+                                    <ul>
+                                    <li>exportación con nombre (varias por módulo)</li>
+                                    <li>exportación por defecto (una por módulo). de módulos, unos ejemplos sertían:</li>
+                                    </ul>
+                                    <code class="code-blockquotes">Exportación con nombre (varias por módulo) - Permite la carga de varias clases separadas por comas, a la hora de especificar en la variable a que clase se hace referencia no hace flata poner el <b>.js</b></code>
+                                    <p><i>Ejemplo 1:</i></p>
+                                    <pre><code [highlight]="code1"></code></pre>
+                                    <p><i>Ejemplo 2</i> (Javascript):</p>
+                                    <pre><code [highlight]="code2"></code></pre>
+                                    <pre><code [highlight]="code3"></code></pre>
+                                    <p>Este tipo de carga también permite que se puedan exportar todos los módulo entero y acceder a las exportaciones con nombre usando la siguiente sintaxis:</p>
+                                    <pre><code [highlight]="code4"></code></pre>
+                                    <code class="code-blockquotes"><b>Exportación por defecto (una por módulo)</b> - Los módulos que solo exporten un único valor son muy populares en la comunidad de Node.js y en el desarrollo frontend. Un módulo de ES6 puede tomar un valor por defecto en la exportación <b>(más información de como es generado el default abajo)</b>.</code>
+                                    <p><i>Ejemplo 1:</i></p>
+                                    <pre><code [highlight]="code5"></code></pre>
+                                    <p><i>Ejemplo 2</i> (Javascript):</p>
+                                    <pre><code [highlight]="code6"></code></pre>
+                                    <pre><code [highlight]="code7"></code></pre>
+                                    <p>En ES6 también podemos hacer esto usando export seguido de una definición estándar de lo que vamos a exportar.</p>
+                                    <pre><code [highlight]="code8"></code></pre>
+                                    <p>Lo interesante es que el nombre que le des será el mismo usara para importar esa parte del módulo.</p>
+                                    <p>En caso de que este objeto fuera importado en otro archivo el resultado sería el siguiente:</p>
+                                    <pre><code [highlight]="code9"></code></pre>
+                                    <p>Es importante apreciar que cuando realizamos la importación se crea un <b>export default</b> cuando vamos a importar una clase</p>
+                                    <pre><code [highlight]="code10"></code></pre>
+                                    <p>A primera vista, tener módulos de forma nativa en ES6 puede parecer una funcionalidad inútil, después de todo ya existe varios sistemas de módulos muy buenos. Pero los módulos de ES6 tienen características que no se pueden agregar con una librería, como una sintaxis reducida y una estructura estática de modulos (lo que ayuda a optimizar entre otras cosas). Además se espera que termine con la fragmentación entre los sistemas CommonsJS y AMD.</p>
+                                    <p>Tener un único estandar para módulos nativo significa:</p>
+                                    <ul>
+                                    <li>No más UMD (Definición Universal de Módulos): UMD es un patrón que permite que un mismo archivo sea usado por distintos sistemas (como CommonJS y AMD). Cuando ES6 este listo para su uso UMD se volverá obsoleto.</li>
+                                    <li>Las nuevas API de los navegadores se volveran módulos en lugar de variables globales o propiedades como navigator.</li>
+                                    <li>No más objetos como namespaces. Objetos como Math y JSON sirven como namespaces para funciones en ECMAScript 5. En el futuro, esta funcionalidad la darán los módulos.</li>
+                                    </ul>
+                                    <p><a href="https://tc39.github.io/ecma262/#sec-imports" target="_blank">Import ES6 Exports ES6</a></p>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #third_step>
+                                <ng-template matStepLabel>CommonJS</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>3 - CommonJS</h1>
+                                    <p>Es una libreria que esta hecha principalmente para el lado del servidor y el cliente, es Sync. Un ejemplo del código JS es:</p>
+                                    <p><i>Ejemplo 1</i> (javascript):</p>
+                                    <pre><code [highlight]="code11"></code></pre>
+                                    <pre><code [highlight]="code12"></code></pre>
+                                    <p><i>Ejemplo 2</i> (javascript):</p>
+                                    <pre><code [highlight]="code13"></code></pre>
+                                    <pre><code [highlight]="code14"></code></pre>
+                                    <p>El resultado de la ejecución de main.js en un servidor nodejs sería algo así:</p>
+                                    <pre><code [highlight]="code15"></code></pre>
+                                    <p><i>Ejemplo 3</i> (javascript):</p>
+                                    <pre><code [highlight]="code16"></code></pre>
+                                    <pre><code [highlight]="code17"></code></pre>
+                                    <p>También se podría importar la clase primero y luego la instanciarla con un valor de vida inicial. Ejemplo:</p>
+                                    <pre><code [highlight]="code18"></code></pre>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #quarter_step>
+                                <ng-template matStepLabel>AMD</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>4 - AMD - RequiserdJS / SystemJS</h1>
+                                    <p>Es una librería solo del lado del cliente (navegador), es <b>Async</b>. Un ejemplo del código JS es:</p>
+                                    <pre><code [highlight]="code19"></code></pre>
+                                    <p>Para utilizar ECmaScript6 o AMD se suelen utilizar transpiladores en nuestro caso emplearemos <b>TypeScript</b> pero también se podrían utilizar otros como por ejemplo Babel.</p>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #fifth_step>
+                                <ng-template matStepLabel>F. Mod.</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>5 - Funcionamientos de los módulos</h1>
+                                    <ol>
+                                        <li>Primero, crearíamos nuestros módulos los exportariamos y los incluiriamos en los archivos que quieres incluirlos</li>
+                                        <li>El segundo paso sería utilizar transpiladores como por ejemplo <b>TypeScript</b> o <b>Babel</b> para convertir esas exportaciones e importaciones en javascript.</li>
+                                        <li>El último paso sería la utilización de <b>bundlers</b>, estos <b>bundlers</b> intentan imitar</li>
+                                    </ol>
+                                    <h2>¿Qué son bundlers?</h2>
+                                    <p>En la actualidad no todos los navegadores soportan estos tipos de carga de módulos es por eso que se suele utilizar <b>bundlers</b> para concatenar, unificar y minimizar los <b>.js</b> finales.</p>
+                                    <p>Los dos más utilizados son:</p>
+                                    <ul>
+                                        <li><a href="https://webpack.github.io/">webpack</a></li>
+                                        <li><a href="http://browserify.org/">browserify</a></li>
+                                    </ul>
+                                    <h2>webpack</h2>
+                                    <p>Su utilidad reside en la fragmentación de código: no todas las partes de una webapp requieren todo el código JavaScript, por eso se encarga de cargar sólo las partes necesarias en cada petición. Además, funciona con un gran número de lenguajes de plantilla y preprocesadores de JavaScript (TypeScript o CoffeeScript, ReactJS...) y CSS (LESS, SASS...). Para que importar diferentes componentes sea sencillo e intuitivo, <b>Webpack</b> implementa el ya estandarizado RequireJS para la inyección de dependencias de nuestra aplicación. Ejemplo:</p>
+                                    <p>Primero empezaremos con la instalación de <b>webpack</b>:</p>
+                                    <pre><code [highlight]="code20"></code></pre>
+                                    <code class="code-blockquotes">HTML5</code>
+                                    <pre><code [highlight]="code21"></code></pre>
+                                    <code class="code-blockquotes">Javascript</code>
+                                    <pre><code [highlight]="code22"></code></pre>
+                                    <pre><code [highlight]="code23"></code></pre>
+                                    <p>Ahora, desde la línea de comandos, ejecutamos el compilado.</p>
+                                    <pre><code [highlight]="code24"></code></pre>
+                                    <p>Si este ejemplo no ha sido suficientemente explicativo vea el siguiente enlace <a href="https://github.com/petehunt/webpack-howto">webpack-howto</a></p>
+                                    <h2>browserify</h2>
+                                    <p>Browserify es una librería de Node.js, escrita por substack uno de los mayores contribuidores al core de Node.js y con mayor número de módulos publicados en NPM.</p>
+                                    <p>Nos permite escribir código JavaScript del cliente, como si estuviésemos programando en Node.js, es decir, como por ahora no tenemos módulos de forma nativa en JavaScript (hasta que se implante el estándar ECMAScript6 que si los trae) hay librerías que se encargan de imitar ese comportamiento (Caso de Require.js hace un tiempo).</p>
+                                    <p>Con esta librería, podemos instalar módulos para el cliente con NPM, al igual que hacíamos con bower, pero ahora, podemos llamarlos desde nuestro código con la palabra reservada <b>require</b>, al igual que en Node.js</p>
+                                    <p>Ejemplo: Vamos a crear <b>app.persona.js</b> como módulo para ver como se exportaría e importaría en nuestra aplicación con browserify.</p>
+                                    <pre><code [highlight]="code25"></code></pre>
+                                    <p>Exportamos la variable Persona como módulo, y que devuelve 2 funciones, saludar y presentar, que son las únicas que podremos utilizar cuando las llamemos desde app.main.js</p>
+                                    <pre><code [highlight]="code26"></code></pre>
+                                    <p>Importamos el módulo recien creado con require('./app.persona') indicándole la ruta donde está el archivo.</p>
+                                    <p>Creamos un objeto persona en la variable carlos, le pasamos los parámetros Carlos y 30 como nombre y edad. y llamamos a las funciones saludar() y presentar() que mostrarán una alerta JavaScript como las siguientes:</p>
+                                    <img src="assets/content/img4.png" alt="img">
+                                    <img src="assets/content/img5.png" alt="img">
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #sixth_step>
+                                <ng-template matStepLabel>TS-Mod.</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>6 - Como funciona TypeScript con módulos</h1>
+                                    <p>La sintaxis de <b>TypeScript</b> A la hora de relizar un módulo se parece mucho a la de <b>ES6</b> pero se puede especificar que tipo de módulo deseamos obtener en el javascript compilado, es decir, que especificación deseamos obtener al final. Por defecto se utiliza commonjs.</p>
+                                    <h2>Tipo de módulos</h2>
+                                    <h2>Módulo global</h2>
+                                    <p>Por defecto cuando escribes un archivo TypeScript como por ejemplo un archivo llamado<code class="code-text">a.ts</code>:</p>
+                                    <pre><code [highlight]="code27"></code></pre>
+                                    <p>Si crearamos otro archivo en el mismo proyecto por ejemplo <code class="code-text">b.ts</code> y quisieramos utilizar variables del archivo <code class="code-text">a.ts</code> podríamos hacerlo ya que para TypeScript ambos pertenecen al namespace global.</p>
+                                    <pre><code [highlight]="code28"></code></pre>
+                                    <p>No es necesario decir que utilizar un namespace global es peligroso ya que esto podria dar lugar a muchos conflictos de nombre.</p>
+                                    <h2>Módulos de archivo</h2>
+                                    <p>Tambien conocidos como <b>módulos externos</b>. Si utilizamos las palabras reservadas  ́import ́ o  ́export ́ dentro de un fichero TypeScript estas creando un ámbito local de este archivo. Esto lo que hace es preveer el namespace global. Si volvemos al ejemplo anterior:</p>
+                                    <pre><code [highlight]="code29"></code></pre>
+                                    <pre><code [highlight]="code30"></code></pre>
+                                    <p>Si quisieras obtener el valor de la variable <code class="code-text">a</code> necesitarias utilizar la siguiente sintaxis:</p>
+                                    <p>Utilizar <code class="code-text">import</code> para variables exportadas solo sirve para quitarlo del namespace global.</p>
+                                    <p>La manera de generar en TypeScript módulos externos es utilizando la palabra reservada <code class="code-text">module</code> , mediante la cual podremos encapsula una parte de nuestro código dentro de un módulo.</p>
+                                    <pre><code [highlight]="code31"></code></pre>
+                                    <pre><code [highlight]="code32"></code></pre>
+                                    <p>Puede haber varios módulos con el mismo nombre en distintos namespace y si quisieramos incluirlos los dos podriamos renombrarlos.</p>
+                                    <p>Es importante observar la palabra reservada <code class="code-text">declare</code> la cual nos permitira a la hora de importar este archivo tener todas las variables delcaradas accesibles, de este modo podríamos acceder a la variable hello como si estuviera en el archivo <code class="code-text">b.ts</code> .</p>
+                                    <h2>Namespace</h2>
+                                    <p>Contexto aislado del resto con lo que podemos trabajar, la diferencia entre <code class="code-text"></code>module y namespace es que un módulo estára normalmente dentro de un archivo y un namespaces puede ser un conjunto de archivos, permitiendonos así englobar una seríe de clases<i>(archivos)</i> bajo un mismo namespace. <b>En la actualidad el namespace es considerado un módulo interno</b>.</p>
+                                    <code class="code-blockquotes">Exportación</code>
+                                    <pre><code [highlight]="code33"></code></pre>
+                                    <p>Existen dos sintaxis para la importación de namespace:</p>
+                                    <code class="code-blockquotes">Importación</code>
+                                    <pre><code [highlight]="code34"></code></pre>
+                                    <pre><code [highlight]="code35"></code></pre>
+                                    <p>La importación en los namespaces tiene como sintaxis recomendada la siguiente: <code class="code-text">/// &lt;reference ... /&gt;</code> .</p>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #seventh_step>
+                                <ng-template matStepLabel>Def.</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>7 - Definitions</h1>
+                                    <p>Son archivos <b>.d.ts</b>, los cuales contendrán las <b>"reglas"</b> que deberemos cumplir para poder utilizar adecuadamente librerías externas de javascript, como por ejemplo jQuery. Los <b>.d.ts</b> suelen ser interfaces.</p>
+                                    <p>Los archivos <b>d.ts</b>, no se generan de forma automática, pero existe un repositorio en github con todos los distintos <b>d.ts</b> el repositorio se llama <a href="https://github.com/typings/typings">typings</a> estos funcionan de la siguiente forma:</p>
+                                    <pre><code [highlight]="code36"></code></pre>
+                                    <p><b>Los archivos de definiciones, son extendibles, es decir heredables o implementables.</b></p>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="done green-600" (click)="stepper.reset()">
+                                        <mat-icon>check</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                    </mat-horizontal-stepper>
+                </div>
+            </div>
+    
+        </div>
+        <!-- / CONTENT -->
+  
+    </div>
+    <!-- / CENTER -->
+  
+  </div>

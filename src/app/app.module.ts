@@ -26,9 +26,12 @@ import { AppComponent } from 'app/app.component';
 import { LayoutModule } from 'app/layout/layout.module';
 import { IntroductionModule } from './main/introduction/introduction.module';
 import { FirstStepsModule } from './main/first-steps/first-steps.module';
-import { ObjectOrientedProgrammingModule } from './main/object-oriented-programming/object-oriented-programming.module';
-import { AdvancedTypesModule } from './main/advanced-types/advanced-types.module';
-import { DecoratorsGenericsModule } from './main/decorators-generics/decorators-generics.module';
+import { ClassModule } from './main/class/class.module';
+import { DecoratorsModule } from './main/decorators/decorators.module';
+import { ModulesModule } from './main/modules/modules.module';
+import { AutomationSystemsModule } from './main/automation-systems/automation-systems.module';
+import { TipsModule } from './main/tips/tips.module';
+import { TutorialsModule } from './main/tutorials/tutorials.module';
 import { HomeComponent } from './main/home/home.component';
 
 const appRoutes: Routes = [
@@ -49,16 +52,28 @@ const appRoutes: Routes = [
         redirectTo  : 'first-steps'
     },
     {
-        path        : 'poo',
-        redirectTo  : 'object-oriented-programming'
+        path        : 'class',
+        redirectTo  : 'class'
     },
     {
-        path        : 'ad-types',
-        redirectTo  : 'advanced-types'
+        path        : 'decorators',
+        redirectTo  : 'decorators'
     },
     {
-        path        : 'dec-generics',
-        redirectTo  : 'decorators-generics'
+        path        : 'modules',
+        redirectTo  : 'modules'
+    },
+    {
+        path        : 'automation-systems',
+        redirectTo  : 'automation-systems'
+    },
+    {
+        path        : 'tips',
+        redirectTo  : 'tips'
+    },
+    {
+        path        : 'tutorials',
+        redirectTo  : 'tutorials'
     }
 ];
 
@@ -94,12 +109,15 @@ const appRoutes: Routes = [
         FuseThemeOptionsModule,
 
         // App modules
-        AdvancedTypesModule,
-        DecoratorsGenericsModule,
-        FirstStepsModule,
         IntroductionModule,
+        FirstStepsModule,
         LayoutModule,
-        ObjectOrientedProgrammingModule,
+        ClassModule,
+        DecoratorsModule,
+        ModulesModule,
+        AutomationSystemsModule,
+        TipsModule,
+        TutorialsModule,
 
         // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
         // and returns simulated server responses.

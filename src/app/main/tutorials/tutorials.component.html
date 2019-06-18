@@ -1,0 +1,247 @@
+<div id="academy-course" class="page-layout simple left-sidebar inner-scroll">
+    <!-- CENTER -->
+    <div class="center">
+        <!-- HEADER -->
+        <div class="header accent p-24" fxLayout="row" fxLayoutAlign="start center">
+            <button mat-icon-button class="mr-16" [routerLink]="'/modules'">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+  
+            <div>
+                <h2>Tutoriales</h2>
+            </div>
+  
+        </div>
+        <!-- / HEADER -->
+  
+        <!-- CONTENT -->
+        <div id="course-content" class="content">
+    
+            <div class="course-step">
+                <div class="course-step-content">
+                        <mat-horizontal-stepper #stepper>
+                            <mat-step #first_step>
+                                <ng-template matStepLabel>Jesus C.</ng-template>
+                                <div style="text-align: left;" *ngIf="stepper.selected == first_step">
+                                    <h1>1 - Jesus Conde</h1>
+                                    <h2>Introducción a TypeScript.</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id1">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>Otros tipos de datos.</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id2">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>Funciones en TypeScript.</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id3">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>Parámetros de Funciones.</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id4">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>Funciones Fat Arrow.</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id5">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>Anatomía de una Clase TypeScript.</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id6">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>Interfaces en TypeScript.</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id7">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>Decoradores en TypeScript.</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id8">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>Decoradores de propiedad.</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id9">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>Uso de Módulos.</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id10">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #second_step>
+                                <ng-template matStepLabel>Fernando Herrera</ng-template>
+                                <div style="text-align: left;" *ngIf="stepper.selected == second_step">
+                                    <h1>2 - Fernando Herrera</h1>
+                                    <h2>0. Introducción al typescript</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id11">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>1. Instalaciones necesarias para el curso</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id12">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>2. Hola mundo en TypeScript</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id13">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>3. Modo observador</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id14">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>4. Inicializar el proyecto de TypeScript (tsconfig.json)</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id15">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>5. Introducción a los tipos básico en TypeScript</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id16">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>6. Tipo de dato: Booleanos</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id17">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>7. Tipo de dato: Numbers - números</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id18">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>8. Tipo de dato: Strings - cadenas de caracteres</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id19">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>9. Tipo de dato: any</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id20">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>10. Tipo de dato: Arreglos</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id21">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>11. Objetos básicos en TypeScript</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id22">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>12. ¿Cómo crear tipos específicos?</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id23">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>13. Tipos personalizados</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id24">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>14. Interfaz básica</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id25">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>15. Definición de una clase básica en TypeScript</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id26">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                    <h2>16. Constructores en las clases de TypeScript</h2>
+                                    <ng-container>
+                                      <div style="text-align: center;">
+                                        <youtube-player [videoId]="id27">
+                                        </youtube-player>
+                                      </div>
+                                    </ng-container>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="done green-600" (click)="stepper.reset()">
+                                        <mat-icon>check</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                    </mat-horizontal-stepper>
+                </div>
+            </div>
+    
+        </div>
+        <!-- / CONTENT -->
+  
+    </div>
+    <!-- / CENTER -->
+  
+  </div>

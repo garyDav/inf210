@@ -7,11 +7,8 @@
 @import '~highlight.js/styles/github.css';
 @import "src/@fuse/scss/fuse";
 
-body {
-  font-size: 17px;
-}
-
 #academy-course {
+    font-size: 17px !important;
 
     .sidebar {
 
@@ -213,9 +210,11 @@ body {
   font-size: 14px !important;
 }
 .code-blockquotes {
-  padding: 5px 5px 5px 15px;
+  padding: 5px 5px 5px 15px !important;
   border-left: 5px solid #cbcbcb;
-  color: #bcbcbc;
+  color: #909090 !important;
+  display: block;
+  background-color: white !important;
 }
 
 .center {

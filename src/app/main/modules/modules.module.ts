@@ -8,14 +8,16 @@ import { MatButtonModule,
          MatSelectModule,
          MatStepperModule } from '@angular/material';
 import { FuseSharedModule } from '@fuse/shared.module';
-import { FirstStepsComponent } from './first-steps.component';
+import { ModulesComponent } from './modules.component';
 import { FuseSidebarModule } from '@fuse/components';
 
 import { HighlightModule } from 'ngx-highlightjs';
+import xml from 'highlight.js/lib/languages/xml';
 import typescript from 'highlight.js/lib/languages/typescript';
 import javascript from 'highlight.js/lib/languages/javascript';
 export function hljsLanguages() {
   return [
+      {name: 'xml', func: xml},
       {name: 'javascript', func: javascript},
       {name: 'typescript', func: typescript}
   ];
@@ -23,15 +25,13 @@ export function hljsLanguages() {
 
 const routes = [
   {
-    path     : 'first-steps',
-    component: FirstStepsComponent
+    path     : 'modules',
+    component: ModulesComponent
   }
 ];
 
 @NgModule({
-  declarations: [
-    FirstStepsComponent
-  ],
+  declarations: [ModulesComponent],
   imports     : [
     RouterModule.forChild(routes),
     MatButtonModule,
@@ -50,7 +50,7 @@ const routes = [
   ],
   providers   : [],
   exports     : [
-    FirstStepsComponent
+    ModulesComponent
   ]
 })
-export class FirstStepsModule { }
+export class ModulesModule { }

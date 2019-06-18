@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { MatButtonModule,
          MatFormFieldModule,
@@ -9,10 +8,9 @@ import { MatButtonModule,
          MatSelectModule,
          MatStepperModule } from '@angular/material';
 import { FuseSharedModule } from '@fuse/shared.module';
-import { ObjectOrientedProgrammingComponent } from './object-oriented-programming.component';
+import { AutomationSystemsComponent } from './automation-systems.component';
 import { FuseSidebarModule } from '@fuse/components';
 
-import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 import { HighlightModule } from 'ngx-highlightjs';
 import typescript from 'highlight.js/lib/languages/typescript';
 import javascript from 'highlight.js/lib/languages/javascript';
@@ -25,15 +23,14 @@ export function hljsLanguages() {
 
 const routes = [
   {
-    path     : 'poo',
-    component: ObjectOrientedProgrammingComponent
+    path     : 'automation-systems',
+    component: AutomationSystemsComponent
   }
 ];
 
+
 @NgModule({
-  declarations: [
-    ObjectOrientedProgrammingComponent
-  ],
+  declarations: [AutomationSystemsComponent],
   imports     : [
     RouterModule.forChild(routes),
     MatButtonModule,
@@ -43,8 +40,6 @@ const routes = [
     MatSelectModule,
     MatStepperModule,
 
-    BrowserModule,
-    NgxYoutubePlayerModule.forRoot(),
     HighlightModule.forRoot({
       languages: hljsLanguages
     }),
@@ -54,7 +49,7 @@ const routes = [
   ],
   providers   : [],
   exports     : [
-    ObjectOrientedProgrammingComponent
+    AutomationSystemsComponent
   ]
 })
-export class ObjectOrientedProgrammingModule { }
+export class AutomationSystemsModule { }

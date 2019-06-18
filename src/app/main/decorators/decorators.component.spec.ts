@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DecoratorsGenericsComponent } from './decorators-generics.component';
+import { DecoratorsComponent } from './decorators.component';
 
-describe('DecoratorsGenericsComponent', () => {
-  let component: DecoratorsGenericsComponent;
-  let fixture: ComponentFixture<DecoratorsGenericsComponent>;
+describe('DecoratorsComponent', () => {
+  let component: DecoratorsComponent;
+  let fixture: ComponentFixture<DecoratorsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DecoratorsGenericsComponent ]
+      declarations: [ DecoratorsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DecoratorsGenericsComponent);
+    fixture = TestBed.createComponent(DecoratorsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,213 @@
+<div id="academy-course" class="page-layout simple left-sidebar inner-scroll">
+    <!-- CENTER -->
+    <div class="center">
+        <!-- HEADER -->
+        <div class="header accent p-24" fxLayout="row" fxLayoutAlign="start center">
+            <button mat-icon-button class="mr-16" [routerLink]="'/first-steps'">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+  
+            <div>
+                <h2>Clases</h2>
+            </div>
+  
+        </div>
+        <!-- / HEADER -->
+  
+        <!-- CONTENT -->
+        <div id="course-content" class="content">
+    
+            <div class="course-step">
+                <div class="course-step-content">
+                        <mat-horizontal-stepper #stepper>
+                            <mat-step #first_step>
+                                <ng-template matStepLabel>Clases</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>1 - Clases</h1>
+                                    <p>En caso de que queramos poder instanciar una clase, necesitaremos un constructor, ya que ha diferencia de lenguajes como <b>java</b> no tiene un contructor por defecto. es por eso que si queremos utilizar la palabra reservada <code class="code-text">new</code> tenemos que crear un constructor con la palabra reservada <code class="code-text">constructor</code> .</p>
+                                    <pre><code [highlight]="code1"></code></pre>
+                                    <pre><code [highlight]="code2"></code></pre>
+                                    <p>Otro ejemplo podría ser este:</p>
+                                    <code class="code-blockquotes">Typescript</code>
+                                    <pre><code [highlight]="code3"></code></pre>
+                                    <code class="code-blockquotes">Javascript</code>
+                                    <pre><code [highlight]="code4"></code></pre>
+                                    <p>Otro ejemplo algo más visual sería el siguiente:</p>
+                                    <pre><code [highlight]="code5"></code></pre>
+                                    <p><b>TypeScript</b> también admite que las clases tengan propiedades estáticas compartidas por todas las instancias de la clase, la manera natural de acceder a estos atributos estáticos sería:</p>
+                                    <pre><code [highlight]="code6"></code></pre>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #second_step>
+                                <ng-template matStepLabel>Mod. Clas.</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>2 - Modificadores de clases</h1>
+                                    <p><b>TypeScript</b> también admite modificadores de accesibilidad o visibilidad como los mencionados abajo</p>
+                                    <table>
+                                    <tr>
+                                        <th><b>Accesibles en</b></th>
+                                        <th><b>public</b></th>
+                                        <th><b>private</b></th>
+                                        <th><b>protected</b></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Instancias de clases</td>
+                                        <td>Sí</td>
+                                        <td>No</td>
+                                        <td>No</td>
+                                    </tr>
+                                    <tr>
+                                        <td>clases</td>
+                                        <td>Sí</td>
+                                        <td>Sí</td>
+                                        <td>Sí</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Clases hijas</td>
+                                        <td>Sí</td>
+                                        <td>No</td>
+                                        <td>Sí</td>
+                                    </tr>
+                                    </table>
+                                    <p>Para comprender un poco mejor la tabla previamente mostrada utilizaremos el siguiente ejemplo:</p>
+                                    <pre><code [highlight]="code7"></code></pre>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #third_step>
+                                <ng-template matStepLabel>Abstract</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>3 - Abstract</h1>
+                                    <p>abstract podría pensarse que también es un modificador de acceso, pero no es así, ya que no modifica la posibilidad de acceso sino que es más similar a una interfaz la cual tiene un <b>"contrato"</b> y este tipo de clases tiene una seríe de normas más estrictas:</p>
+                                    <ul>
+                                    <li><b>Una clase abstracta no puede ser directamente instanciada</b>, por el contrario tiene que ser utilizada mediante la herencia de dicha clase.</li>
+                                    <li>La clase abstracta no puede ser accedida directamente por las clases hijas, son estas las que tienen que aportar la funcionalidad.</li>
+                                    </ul>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #quarter_step>
+                                <ng-template matStepLabel>IIFE</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>4 - ¿Qué es IIFE?</h1>
+                                    <p><b>IIFE o Immediately-Invoked Function Expression</b> Son funciones anónimas en las cuales estará contenido nuestro código js, esto es debido a que de esa forma estaríamos creando algo así como un namespace, es decir, el contenido de esa función no sería accesible desde fuera a no ser que se instanciará o se utilizara herencia o interfaces, el código js sería algo así:</p>
+                                    <pre><code [highlight]="code8"></code></pre>
+                                    <p>Un ejemplo de esto sería el siguiente:</p>
+                                    <code class="code-blockquotes">TypeScript</code>
+                                    <pre><code [highlight]="code9"></code></pre>
+                                    <code class="code-blockquotes">Javascript ya compilado</code>
+                                    <pre><code [highlight]="code10"></code></pre>
+                                    <p>Se puede apreciar que la IIFE permite que <b>TypeScript</b> capture facilmente la clase <code class="code-text">Point</code> en una variable llamada <code class="code-text">_super</code> y luego utilizarla en el cuerpo de la clase.</p>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #fifth_step>
+                                <ng-template matStepLabel>Herencia</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>5 - Herencia</h1>
+                                    <p>En <b>TypeScript</b> no existe la herencia múltiple.</p>
+                                    <code class="code-blockquotes">TypeScript</code>
+                                    <pre><code [highlight]="code11"></code></pre>
+                                    <code class="code-blockquotes">Javascript</code>
+                                    <pre><code [highlight]="code12"></code></pre>
+                                    <h2>super</h2>
+                                    <p>En las clases hijas hace referencia a la clase padre, tenemos que tener en cuenta que <code class="code-text">super</code> solo deberá ser utilizado cuando no haya de por medio <b>fat arrows</b> o funciones de flecha, ya que en ese caso debería utilizarse la palabra reservada <code class="code-text">this</code> veamos unos ejemplos:</p>
+                                    <code class="code-blockquotes"><b>Super</b> sin fat arrow</code>
+                                    <pre><code [highlight]="code13"></code></pre>
+                                    <code class="code-blockquotes"><b>This</b> con fat arrow</code>
+                                    <pre><code [highlight]="code14"></code></pre>
+                                    <p>Si intentamos utilizar super en esta situación el compilador nos dará un error. que nos dirá que solo métodos <code class="code-text">public</code> o <code class="code-text">protected</code> son accesibles con la palabra reservada <code class="code-text">super</code></p>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #sixth_step>
+                                <ng-template matStepLabel>Sob. Met.</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>6 - Sobrecarga de métodos</h1>
+                                    <p>La sobrecarga de métodos de <b>TypeScript</b> es así:</p>
+                                    <pre><code [highlight]="code15"></code></pre>
+                                    <p>Este tipo de sobrecarga no tiene mucho sentido porque sería más simple poner un <b>Any</b>.</p>
+                                    <h2>Mixin</h2>
+                                    <p>Cuando tenemos una serie de clases de <b>TypeScript</b> las cuales no tienen ninguna relación de herencia entre ellas pero necesitamos que tengan comportamientos comunes, crearemos <b>mixin</b> , para los que hayan visto <b>PHP</b> es algo así como los <b>traits</b>, estos <b>mixin</b> nos permiten utilizar las interfaces como clases para poder intentar tener un sucedaneo de herencia multiple, la cual nos permitirá modificar el comportamiento de las clases para poder implementar estos <b>"contratos"</b>.</p>
+                                    <p>Esto es un mixin en <b>TypeScript</b> a continuación vamos a explicar paso a paso el siguiente ejemplo:</p>
+                                    <pre><code [highlight]="code16"></code></pre>
+                                    <p>En este trozo de código podremos apreciar que hay dos clases distintas y que cada una de ellas se enfoca en una actividad o capacidad distinta. Más adelante mezclaremos estas clases juntas en otra clase para poder obtener ambas capacidades.</p>
+                                    <pre><code [highlight]="code17"></code></pre>
+                                    <p>Lo siguiente que haremos es crear una clase la cual implementará la combinación entre las dos clases previamente vistas.</p>
+                                    <pre><code [highlight]="code18"></code></pre>
+                                    <p>Lo primero que podreis apreciar es que en vez de utilizar <code class="code-text">extends</code> estamos utilizando <code class="code-text">implements</code> , esto es debido a que en <b>TypeScript</b> no existe la herencia multiple y utilizando la palabra reservada <code class="code-text">implements</code> trata a las clases que se está implementando como interfaces que deben ser cumplidas. Esto implica que la clase que acabamos de crear debe tener los mismo métodos que las dos "interfaces"</p>
+                                    <pre><code [highlight]="code19"></code></pre>
+                                    <p>El siguiente paso es crear una función la cual nos permitirá realizar el mixin de cada una de las propiedades de las clases en el objeto que deseemos</p>
+                                    <pre><code [highlight]="code20"></code></pre>
+                                    <p>En el siguiente paso lo que se hace es realmente implementar el mixin de las clases:</p>
+                                    <pre><code [highlight]="code21"></code></pre>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #seventh_step>
+                                <ng-template matStepLabel>Interfaces</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>7 - Interfaces</h1>
+                                    <p>En TypeScript las interfaces son las encargadas de comprobar los tipos de las variables que se pasan como argumentos y del cumplimiento de los contratos.</p>
+                                    <pre><code [highlight]="code22"></code></pre>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="done green-600" (click)="stepper.reset()">
+                                        <mat-icon>check</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                    </mat-horizontal-stepper>
+                </div>
+            </div>
+    
+        </div>
+        <!-- / CONTENT -->
+  
+    </div>
+    <!-- / CENTER -->
+  
+  </div>

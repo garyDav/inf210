@@ -21,25 +21,46 @@ export const navigation: FuseNavigation[] = [
                 url      : '/first-steps'
             },
             {
-                id       : 'poo',
-                title    : 'P.O.O.',
+                id       : 'class',
+                title    : 'Clases',
                 type     : 'item',
                 icon     : 'note',
-                url      : '/poo'
+                url      : '/class'
             },
             {
-                id       : 'tad',
-                title    : 'Tipos avanzados de datos',
+                id       : 'decorators',
+                title    : 'Decoradores',
                 type     : 'item',
                 icon     : 'note',
-                url      : '/ad-types'
+                url      : '/decorators'
             },
             {
-                id       : 'decgen',
-                title    : 'Decoradores y Genéricos',
+                id       : 'modules',
+                title    : 'Módulos',
                 type     : 'item',
                 icon     : 'note',
-                url      : '/dec-generics'
+                url      : '/modules'
+            },
+            // {
+            //     id       : 'automationsystems',
+            //     title    : 'Sistemas de automatización',
+            //     type     : 'item',
+            //     icon     : 'note',
+            //     url      : '/automation-systems'
+            // },
+            // {
+            //     id       : 'tips',
+            //     title    : 'Consejos',
+            //     type     : 'item',
+            //     icon     : 'note',
+            //     url      : '/tips'
+            // }
+            {
+                id       : 'tutorials',
+                title    : 'Tutoriales',
+                type     : 'item',
+                icon     : 'note',
+                url      : '/tutorials'
             }
         ]
     }

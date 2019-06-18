@@ -1,0 +1,129 @@
+<div id="academy-course" class="page-layout simple left-sidebar inner-scroll">
+    <!-- CENTER -->
+    <div class="center">
+        <!-- HEADER -->
+        <div class="header accent p-24" fxLayout="row" fxLayoutAlign="start center">
+            <button mat-icon-button class="mr-16" [routerLink]="'/class'">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+  
+            <div>
+                <h2>Decoradores</h2>
+            </div>
+  
+        </div>
+        <!-- / HEADER -->
+  
+        <!-- CONTENT -->
+        <div id="course-content" class="content">
+    
+            <div class="course-step">
+                <div class="course-step-content">
+                        <mat-horizontal-stepper #stepper>
+                            <mat-step #first_step>
+                                <ng-template matStepLabel>Decorators</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>1 - Decorators</h1>
+                                    <p>Para poder utilizar los decoradores tenemos que permitirlo en nuestro <code class="code-text">tsconfig</code> y escribir lo siguiente</p>
+                                    <pre><code [highlight]="code1"></code></pre>
+                                    <p>La sintaxis de los decoradores es</p>
+                                    <pre><code [highlight]="code2"></code></pre>
+                                    <pre><code [highlight]="code3"></code></pre>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #second_step>
+                                <ng-template matStepLabel>Class Dec.</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>2 - Class Decorator</h1>
+                                    <pre><code [highlight]="code4"></code></pre>
+                                    <pre><code [highlight]="code5"></code></pre>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #third_step>
+                                <ng-template matStepLabel>Pro. Dec.</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>3 - Property Decorator</h1>
+                                    <pre><code [highlight]="code6"></code></pre>
+                                    <pre><code [highlight]="code7"></code></pre>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #quarter_step>
+                                <ng-template matStepLabel>Met. Dec.</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>4 - Method Decorator</h1>
+                                    <pre><code [highlight]="code8"></code></pre>
+                                    <pre><code [highlight]="code9"></code></pre>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #fifth_step>
+                                <ng-template matStepLabel>S. Met. Dec.</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>5 - Static Method Decorator</h1>
+                                    <pre><code [highlight]="code10"></code></pre>
+                                    <pre><code [highlight]="code11"></code></pre>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #sixth_step>
+                                <ng-template matStepLabel>Par. Dec.</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>6 - Parameter Decorator</h1>
+                                    <pre><code [highlight]="code12"></code></pre>
+                                    <pre><code [highlight]="code13"></code></pre>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="done green-600" (click)="stepper.reset()">
+                                        <mat-icon>check</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                    </mat-horizontal-stepper>
+                </div>
+            </div>
+    
+        </div>
+        <!-- / CONTENT -->
+  
+    </div>
+    <!-- / CENTER -->
+  
+  </div>

@@ -229,49 +229,6 @@
                                     <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
                                         <mat-icon>chevron_left</mat-icon>
                                     </button>
-                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
-                                        <mat-icon>chevron_right</mat-icon>
-                                    </button>
-                                </div>
-                            </mat-step>
-                            <mat-step #quarter_step>
-                                <ng-template matStepLabel>Tutorial</ng-template>
-                                <div style="text-align: left;">
-                                    <h1>4 - Tutorial</h1>
-                                    <p>
-                                        En este tutorial verá la parte introductoria de TypeScript.
-                                    </p>
-                                    <ng-container *ngIf="stepper.selected == quarter_step">
-                                        <div style="text-align: center;">
-                                            <button *ngIf="ytEvent !== 1"
-                                                type="button"
-                                                class="btn btn-primary"
-                                                (click)="playVideo()"
-                                                mat-fab color="primary">
-                                                Play >
-                                            </button>
-                                            <button *ngIf="ytEvent === 1"
-                                                type="button"
-                                                class="btn btn-danger"
-                                                (click)="pauseVideo()"
-                                                mat-fab color="primary">
-                                                Pausa ||
-                                            </button>
-                                        </div>
-                                        <div style="text-align: center;">
-                                            <youtube-player
-                                                [videoId]="id"
-                                                (ready)="savePlayer($event)"
-                                                (change)="onStateChange($event)"
-                                                [playerVars]="playerVars">
-                                            </youtube-player>
-                                        </div>
-                                    </ng-container>
-                                </div>
-                                <div class="step-navigation">
-                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
-                                        <mat-icon>chevron_left</mat-icon>
-                                    </button>
                                     <button mat-fab class="done green-600" (click)="stepper.reset()">
                                         <mat-icon>check</mat-icon>
                                     </button>

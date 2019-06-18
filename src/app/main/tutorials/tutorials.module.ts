@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { MatButtonModule,
          MatFormFieldModule,
@@ -8,14 +9,17 @@ import { MatButtonModule,
          MatSelectModule,
          MatStepperModule } from '@angular/material';
 import { FuseSharedModule } from '@fuse/shared.module';
-import { FirstStepsComponent } from './first-steps.component';
+import { TutorialsComponent } from './tutorials.component';
 import { FuseSidebarModule } from '@fuse/components';
 
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 import { HighlightModule } from 'ngx-highlightjs';
+import xml from 'highlight.js/lib/languages/xml';
 import typescript from 'highlight.js/lib/languages/typescript';
 import javascript from 'highlight.js/lib/languages/javascript';
 export function hljsLanguages() {
   return [
+      {name: 'xml', func: xml},
       {name: 'javascript', func: javascript},
       {name: 'typescript', func: typescript}
   ];
@@ -23,15 +27,13 @@ export function hljsLanguages() {
 
 const routes = [
   {
-    path     : 'first-steps',
-    component: FirstStepsComponent
+    path     : 'tutorials',
+    component: TutorialsComponent
   }
 ];
 
 @NgModule({
-  declarations: [
-    FirstStepsComponent
-  ],
+  declarations: [TutorialsComponent],
   imports     : [
     RouterModule.forChild(routes),
     MatButtonModule,
@@ -41,6 +43,8 @@ const routes = [
     MatSelectModule,
     MatStepperModule,
 
+    BrowserModule,
+    NgxYoutubePlayerModule.forRoot(),
     HighlightModule.forRoot({
       languages: hljsLanguages
     }),
@@ -50,7 +54,7 @@ const routes = [
   ],
   providers   : [],
   exports     : [
-    FirstStepsComponent
+    TutorialsComponent
   ]
 })
-export class FirstStepsModule { }
+export class TutorialsModule { }

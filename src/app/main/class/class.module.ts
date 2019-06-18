@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { MatButtonModule,
          MatFormFieldModule,
@@ -9,10 +8,9 @@ import { MatButtonModule,
          MatSelectModule,
          MatStepperModule } from '@angular/material';
 import { FuseSharedModule } from '@fuse/shared.module';
-import { DecoratorsGenericsComponent } from './decorators-generics.component';
+import { ClassComponent } from './class.component';
 import { FuseSidebarModule } from '@fuse/components';
 
-import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 import { HighlightModule } from 'ngx-highlightjs';
 import typescript from 'highlight.js/lib/languages/typescript';
 import javascript from 'highlight.js/lib/languages/javascript';
@@ -25,15 +23,13 @@ export function hljsLanguages() {
 
 const routes = [
   {
-    path     : 'dec-generics',
-    component: DecoratorsGenericsComponent
+    path     : 'class',
+    component: ClassComponent
   }
 ];
 
 @NgModule({
-  declarations: [
-    DecoratorsGenericsComponent
-  ],
+  declarations: [ClassComponent],
   imports     : [
     RouterModule.forChild(routes),
     MatButtonModule,
@@ -43,8 +39,6 @@ const routes = [
     MatSelectModule,
     MatStepperModule,
 
-    BrowserModule,
-    NgxYoutubePlayerModule.forRoot(),
     HighlightModule.forRoot({
       languages: hljsLanguages
     }),
@@ -54,7 +48,7 @@ const routes = [
   ],
   providers   : [],
   exports     : [
-    DecoratorsGenericsComponent
+    ClassComponent
   ]
 })
-export class DecoratorsGenericsModule { }
+export class ClassModule { }

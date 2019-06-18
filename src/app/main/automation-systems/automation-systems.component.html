@@ -1,0 +1,128 @@
+<div id="academy-course" class="page-layout simple left-sidebar inner-scroll">
+    <!-- CENTER -->
+    <div class="center">
+        <!-- HEADER -->
+        <div class="header accent p-24" fxLayout="row" fxLayoutAlign="start center">
+            <button mat-icon-button class="mr-16" [routerLink]="'/home'">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+  
+            <div>
+                <h2>Sistemas de automatización</h2>
+            </div>
+  
+        </div>
+        <!-- / HEADER -->
+  
+        <!-- CONTENT -->
+        <div id="course-content" class="content">
+    
+            <div class="course-step">
+                <div class="course-step-content">
+                        <mat-horizontal-stepper #stepper>
+                            <mat-step #first_step>
+                                <ng-template matStepLabel>first_step</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>1 - </h1>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #second_step>
+                                <ng-template matStepLabel>second_step</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>2 - </h1>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #third_step>
+                                <ng-template matStepLabel>third_step</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>3 - </h1>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #quarter_step>
+                                <ng-template matStepLabel>quarter_step</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>4 - </h1>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #fifth_step>
+                                <ng-template matStepLabel>fifth_step</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>5 - </h1>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #sixth_step>
+                                <ng-template matStepLabel>sixth_step</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>6 - </h1>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="next mat-accent fuse-white-fg" matStepperNext>
+                                        <mat-icon>chevron_right</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                            <mat-step #seventh_step>
+                                <ng-template matStepLabel>seventh_step</ng-template>
+                                <div style="text-align: left;">
+                                    <h1>7 - </h1>
+                                </div>
+                                <div class="step-navigation">
+                                    <button mat-fab class="previous mat-accent fuse-white-fg" matStepperPrevious>
+                                        <mat-icon>chevron_left</mat-icon>
+                                    </button>
+                                    <button mat-fab class="done green-600" (click)="stepper.reset()">
+                                        <mat-icon>check</mat-icon>
+                                    </button>
+                                </div>
+                            </mat-step>
+                    </mat-horizontal-stepper>
+                </div>
+            </div>
+    
+        </div>
+        <!-- / CONTENT -->
+  
+    </div>
+    <!-- / CENTER -->
+  
+  </div>

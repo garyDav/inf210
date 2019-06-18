@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdvancedTypesComponent } from './advanced-types.component';
+import { ModulesComponent } from './modules.component';
 
-describe('AdvancedTypesComponent', () => {
-  let component: AdvancedTypesComponent;
-  let fixture: ComponentFixture<AdvancedTypesComponent>;
+describe('ModulesComponent', () => {
+  let component: ModulesComponent;
+  let fixture: ComponentFixture<ModulesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdvancedTypesComponent ]
+      declarations: [ ModulesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdvancedTypesComponent);
+    fixture = TestBed.createComponent(ModulesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
